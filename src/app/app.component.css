@@ -1,0 +1,13 @@
+body{
+    color: black;
+}
+nav{
+    background-color: white;
+    color: rgb(47 82 52);
+}
+nav .order-1 ul li{
+    margin-left: 20px;
+}
+nav .order-3 ul li{
+    margin-right: 20px;
+}

@@ -7,13 +7,15 @@ import { KontaktComponent } from './kontakt/kontakt.component';
 import { MenuComponent } from './menu/menu.component';
 import { KonkursyComponent } from './konkursy/konkursy.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KontaktComponent,
     MenuComponent,
-    KonkursyComponent
+    KonkursyComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

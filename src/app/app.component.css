@@ -1,0 +1,16 @@
+nav{
+    background-color: white;
+}
+nav a {
+    color: #2a373b !important;
+}
+.nav-bottom{
+    height: 1em;
+    width: 100%;
+    background-color: #2a373b;
+}
+@media (max-width: 575.98px) {
+    nav .nav-item {
+        margin-left: 1rem !important;
+    }
+}

@@ -6,21 +6,17 @@ import { AppComponent } from './app.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { MenuComponent } from './menu/menu.component';
 import { KonkursyComponent } from './konkursy/konkursy.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { OnasComponent } from './onas/onas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KontaktComponent,
     MenuComponent,
-    KonkursyComponent,
-    OnasComponent
+    KonkursyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgbModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

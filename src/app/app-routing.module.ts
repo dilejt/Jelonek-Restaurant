@@ -3,13 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { KonkursyComponent } from './konkursy/konkursy.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { MenuComponent } from './menu/menu.component';
-import { OnasComponent } from './onas/onas.component';
 
 const routes: Routes = [
   { path: 'kontakt', component: KontaktComponent},
   { path: 'menu', component: MenuComponent},
-  { path: 'konkursy', component: KonkursyComponent},
-  { path: 'onas', component: OnasComponent}
+  { path: 'konkursy', component: KonkursyComponent}
 ];
 
 @NgModule({

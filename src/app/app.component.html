@@ -1,15 +1,18 @@
-<nav class="navbar navbar-expand-sm navbar-light">
-  <div class="navbar-collapse collapse w-100 order-1 order-sm-0 multi-collapse justify-content-end" id="multiCollapseExample1">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="navbar-collapse collapse w-100 order-1 order-lg-0 multi-collapse justify-content-end" id="multiCollapseExample1">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item me-3">
-        <a routerLink="/menu" routerLinkActive="active">Menu</a>
+      <li class="nav-item text-center">
+        <a class="linkEffect" routerLink="/menu" routerLinkActive="active">Menu</a>
       </li>
-      <li class="nav-item me-3">
-        <a routerLink="/konkursy" routerLinkActive="active">Konkursy</a>
+      <li class="nav-item text-center">
+        <a class="linkEffect" routerLink="/konkursy" routerLinkActive="active">Konkursy</a>
+      </li>
+      <li class="nav-item text-center">
+        <a class="linkEffect" routerLink="/" routerLinkActive="active">Promocje</a>
       </li>
     </ul>
   </div>
-  <div class="mx-lg order-0">
+  <div id="logoDiv" class="mx-lg order-0 mx-auto">
     <a class="navbar-brand mx-auto" href="/">
       <img src="assets/images/logo.png" height="100" class="d-inline-block align-top" alt="Logo">
     </a>
@@ -19,17 +22,18 @@
   </button>
   <div class="navbar-collapse collapse w-100 order-3 multi-collapse justify-content-start" id="multiCollapseExample2">
     <ul class="navbar-nav">
-      <li class="nav-item ms-3">
-        <a routerLink="/kontakt" routerLinkActive="active">Kontakt</a>
+      <li class="nav-item text-center">
+        <a class="linkEffect" routerLink="/kontakt" routerLinkActive="active">Kontakt</a>
       </li>
-      <li class="nav-item ms-3">
-        <a routerLink="/onas" routerLinkActive="active">O nas</a>
+      <li class="nav-item text-center">
+        <a class="linkEffect" routerLink="/onas" routerLinkActive="active">O nas</a>
+      </li>
+      <li class="nav-item text-center">
+        <a class="linkEffect" routerLink="/" routerLinkActive="active">Opinie</a>
       </li>
     </ul>
   </div>
 </nav>
-<div class="nav-bottom">
-</div>
 <router-outlet>
   <!-- Podstrony -->
 </router-outlet>

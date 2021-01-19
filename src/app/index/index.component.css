@@ -1,0 +1,12 @@
+header{
+    background-image: url("/assets/images/header.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+}
+#menuCategories{
+    background-color: #2a373b;
+    height: 250px;
+}

@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { KonkursyComponent } from './konkursy/konkursy.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewsComponent } from './news/news.component';
+import { OnasComponent } from './onas/onas.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NewsComponent } from './news/news.component';
     KontaktComponent,
     MenuComponent,
     KonkursyComponent,
-    NewsComponent
+    NewsComponent,
+    OnasComponent
   ],
   imports: [
     BrowserModule,

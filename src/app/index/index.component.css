@@ -3,10 +3,41 @@ header{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Great Vibes';
     width: auto;
     height: 100vh;
 }
+header > div{
+    padding-top: 250px;
+}
+#specialDish{
+    height: 800px;
+}
 #menuCategories{
-    background-color: #2a373b;
-    height: 300px;
+
+    height: 700px;
+}
+.ornamentalHeading{
+    padding-top: 15px;
+    font-size: 6vw;
+    font-family: 'Great Vibes';
+}
+@media (min-width: 1200px) {
+    .ornamentalHeading{
+        font-size: 4vw;
+    }
+}
+.ornamentalHeading::before{
+    content: '';
+    background-image: url("/assets/images/index/delimiter.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center center;
+    display: block;
+    margin: 40px auto 0 auto;
+    width: 50vw;
+    height: 80px;
+}
+#discoverUs{
+    
 }

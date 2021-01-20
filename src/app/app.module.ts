@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { MenuComponent } from './menu/menu.component';
 import { KonkursyComponent } from './konkursy/konkursy.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KontaktComponent,
     MenuComponent,
-    KonkursyComponent
+    KonkursyComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

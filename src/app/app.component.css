@@ -1,8 +1,10 @@
 nav{
     background-color: transparent;
-    background: rgba(0, 0, 0, 0.02) !important;
+    background: rgba(255, 255, 255, 0.02) !important;
     backdrop-filter: blur(10px);
-    font-size: 1.25em;
+    font-size: 1.5em;
+    font-family: 'Parisienne';
+    font-weight: 700;
 }
 nav a {
     color: #2a373b !important;
@@ -11,7 +13,6 @@ nav a {
 nav button{
     margin-right: 1em;
 }
-
 @media (min-width: 992px) {
     nav .order-1 .nav-item {
         margin-right: 1rem!important;
@@ -32,8 +33,23 @@ nav button{
         padding: 6px 0; 
       }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 991.98px) and (min-width: 343px){
     #logoDiv{
         padding-left: calc(56px + 1em);
     }
 }
+@media (max-width: 342px) {
+    #logoDiv{
+        flex-basis: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    nav button{
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+}
+
+    

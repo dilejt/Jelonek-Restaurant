@@ -7,6 +7,7 @@ import { KontaktComponent } from './kontakt/kontakt.component';
 import { MenuComponent } from './menu/menu.component';
 import { KonkursyComponent } from './konkursy/konkursy.component';
 import { IndexComponent } from './index/index.component';
+import { OnasComponent } from './onas/onas.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { IndexComponent } from './index/index.component';
     KontaktComponent,
     MenuComponent,
     KonkursyComponent,
-    IndexComponent
+    IndexComponent,
+    OnasComponent
   ],
   imports: [
     BrowserModule,

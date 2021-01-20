@@ -1,0 +1,59 @@
+#header{
+    background-image: url("/assets/images/onas/wall.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 120vh;
+    font-family: 'Dancing Script', cursive;
+}
+#content{
+    padding-top: 127px;
+    
+}
+
+.buttons {
+    overflow: hidden;
+    position: fixed;
+    top:130px ;
+    left:48%;
+    
+    
+  }
+  
+  .card,.row{
+      background-color: transparent;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+  }
+  
+  .buttons button{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 10px;
+    
+  }
+  
+  .buttons button:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  #content{
+      padding-top: 10%;
+      width: 50%;
+      
+      
+      margin: auto;
+      width: 50%;
+      
+      
+  }
+  
+
+  

@@ -4,13 +4,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    height: 200vh;
+    height: auto;
+
     
 }
 
 #test{
   padding-top: 20vh;
   font-size: 3vh;
+  padding-bottom: 5vh;
 }
 #tabela{
   border-spacing: 15px;

@@ -1,27 +1,60 @@
-header{
-    background-image: url("/assets/images/konkursy/drewno.jpg");
+
+  #header{
+    background-image: url("/assets/images/konkursy/background2.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    height: 100vh;
-}
+    height:110vh;
+  }
+    
+  #test{
+    padding-top: 14vh;
+    font-size: 3vh;
+    padding-bottom: 5vh;
+  }
+ 
+  p{
+    font-size:3vw;
+  }
+  
+  .font{
+    -webkit-text-stroke: 2px black; 
+    font-family: sans; 
+    color:white;
+    font-weight: bold;
+    font-family: 'URW Chancery L', cursive;
+    padding-left:5vh ;
+    -webkit-transform: rotate(-19deg);
+    -moz-transform: rotate(-19deg);
+    -ms-transform: rotate(-19deg);
+    -o-transform: rotate(-19deg);
+    transform: rotate(-19deg);
+  }
+  #label{
+    color:brown;
+    font-family: 'URW Chancery L', cursive;
+    font-size:4vw;
+    font-weight: bold;
+    padding-top: 10vh;
+  }
+  @media (max-width: 730px) and (max-width: 787.98px) { 
+    .font{
+      -webkit-text-stroke: 0px;
+      padding-left:6vh ;
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+    }
+    p{
+      font-size:5vw;
+    }
+    #label {
+      font-size:7vw;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   }
+ 
+  

@@ -7,43 +7,21 @@ header{
     height: 100vh;
 }
 
-.tekst{
-  margin-right: auto;
-  padding-top:200px;
-  line-height: 1;
-  transform: rotate(-5deg);
- padding-left: 250px;
-  font-size:5vw;
-  color:rgb(255, 249, 249);
-}
-.kolor
-{
-  color:rgb(184, 21, 21);
-}
-.zdjecie
-{
-padding-top:150px;
-margin-left:auto;
-}
-.paczki{
-  margin-left:auto;
-  margin-top: 50px;
-  background-image: url("/assets/images/konkursy/ponczki.png");
-  background-position: 50px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-}
-@media(max-width:575px)
-{
-  .tekst{
-    transform: rotate(0deg);
-    font-size:10vw;
-    padding-left: 10px;
-  }
-  .paczki{
-    width: 100vw;
-  height: 100vh;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

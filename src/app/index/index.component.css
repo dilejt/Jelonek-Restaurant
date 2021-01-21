@@ -31,7 +31,7 @@ header > div{
     content: '';
     background-image: url("/assets/images/index/delimiter.png");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     background-position: center center;
     display: block;
     margin: 40px auto 0 auto;
@@ -39,5 +39,9 @@ header > div{
     height: 80px;
 }
 #discoverUs{
-    
+    background-image: url("/assets/images/index/chief.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
 }

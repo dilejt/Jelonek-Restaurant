@@ -4,28 +4,53 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    height: 120vh;
-    font-family: 'Dancing Script';
-}
-#content{
-    padding-top: 127px;
+    height: auto;
+
     
 }
 
+#test{
+  padding-top: 20vh;
+  font-size: 3vh;
+  padding-bottom: 5vh;
+}
+#tabela{
+  border-spacing: 15px;
+}
+b,p{
+  font-family: 'Dancing Script';
+}
 .buttons {
     overflow: hidden;
     position: fixed;
-    top:130px ;
-    left:48%;
+    top:80% ;
+    left:78%;
+    z-index: 4;
     
+    
+  }
+  .resp{
+    max-width: 100%;
+    
+  }
+  .pic{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .opacity {
+      background-color: transparent;
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(10px);
+  }
+  .card,.row {
+    background-color: transparent;
+  
+}
+  .col-sm-6{
+    background-color: none !important;
     
   }
   
-  .card,.row{
-      background-color: transparent;
-    background: rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(10px);
-  }
   
   .buttons button{
     float: left;
@@ -35,7 +60,9 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    margin-right: 10px;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    
     
   }
   
@@ -51,9 +78,10 @@
       
       margin: auto;
       width: 50%;
-      
-      
+     
   }
-  
+  .col-sm{
+    font-size: 4vh;
+  }
 
   

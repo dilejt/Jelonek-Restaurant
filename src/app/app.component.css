@@ -1,6 +1,6 @@
 nav{
     background-color: transparent;
-    background: rgba(255, 255, 255, 0.02) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(10px);
     font-size: 1.5em;
     font-family: 'Parisienne';

@@ -8,7 +8,9 @@
 
     
 }
-
+font{
+  font-weight: bold;
+}
 #test{
   padding-top: 20vh;
   font-size: 3vh;

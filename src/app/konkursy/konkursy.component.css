@@ -1,6 +1,6 @@
 
   #header{
-    background-image: url("/assets/images/konkursy/background2.png");
+    background-image: url("/assets/images/konkursy/stol2.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,25 +16,30 @@
  
   p{
     font-size:3vw;
+    -webkit-text-stroke:2px black; 
   }
-  
+  .color{
+    color:rgb(202 138 91);
+  }
   .font{
-    -webkit-text-stroke: 2px black; 
-    font-family: sans; 
+  
+    
     color:white;
     font-weight: bold;
-    font-family: 'URW Chancery L', cursive;
+    font-family: Helvetica, sans-serif;
+    
     padding-left:5vh ;
-    -webkit-transform: rotate(-19deg);
-    -moz-transform: rotate(-19deg);
-    -ms-transform: rotate(-19deg);
-    -o-transform: rotate(-19deg);
-    transform: rotate(-19deg);
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    transform: rotate(-6deg);
   }
   #label{
-    color:brown;
-    font-family: 'URW Chancery L', cursive;
-    font-size:4vw;
+    
+    color:rgb(202 138 91);
+    font-family: 'Dancing Script';
+    font-size:6vw;
     font-weight: bold;
     padding-top: 10vh;
   }
@@ -50,6 +55,7 @@
     }
     p{
       font-size:5vw;
+      -webkit-text-stroke:0px black; 
     }
     #label {
       font-size:7vw;

@@ -1,0 +1,102 @@
+
+header
+{
+    padding-top: 5% ;
+    background-image: url("/assets/images/news/sala2.png");
+    width: auto;
+    height: 100vh;
+    object-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Great Vibes';
+    background-position: center center;
+    color:white
+
+}
+.news_left
+{
+  height: 400px;
+  float: left;
+  clear: both;
+}
+.news_right
+{
+  height: 400px;
+  float: right;
+  clear: both;
+}
+
+img
+{
+  float:right;
+  border-radius: 50%;
+  width: auto;
+  max-width: 200px;
+}
+.col-md-9
+{
+  opacity: 1.0;
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("/assets/images/news/lejens1.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center center;
+}
+.front
+{
+  font-size: 40px;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#container
+{
+  font-size: large;
+}
+.container {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    font-family: 'Cardo';
+    font-size: 24px;
+    font-weight: normal;
+  }
+ .row
+ {
+   font-size: 4vh;
+ }
+
+  .ornamentalHeading{
+    
+    font-size: 10vw;
+    font-family: 'Great Vibes';
+    text-align: center;
+}
+@media (min-width: 1200px) {
+    .ornamentalHeading{
+        font-size: 4vw;
+    }
+    
+}
+@media (max-width:600px)
+{
+  img
+    {
+      display: block;
+      margin-left: auto;
+      margin-right: 25%;
+      
+    }
+}
+
+.ornamentalHeading::before{
+    content: '';
+    background-image: url("/assets/images/index/delimiter.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center center;
+    display: block;
+    margin: 40px auto 0 auto;
+    width: 50vw;
+    height: 80px;
+    text-align: center;
+}

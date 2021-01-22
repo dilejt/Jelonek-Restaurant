@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { KonkursyComponent } from './konkursy/konkursy.component';
 import { IndexComponent } from './index/index.component';
 import { OnasComponent } from './onas/onas.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { OnasComponent } from './onas/onas.component';
     MenuComponent,
     KonkursyComponent,
     IndexComponent,
-    OnasComponent
+    OnasComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

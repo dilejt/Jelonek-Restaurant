@@ -1,0 +1,135 @@
+html {
+    scroll-behavior: smooth;
+}
+header
+{
+    width: auto;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)), url('/assets/images/kontakt/tlo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Great Vibes';
+    background-position: center center;
+    color:white;
+    background-blend-mode: darken;
+}
+.front
+{
+    font-size:5vw;
+    text-align:center;
+    padding-top:350px;
+    margin-left:auto;
+    margin-right: auto;
+    
+}
+.front1
+{
+    
+    text-align:center;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 40px;
+}
+.front2 button
+{
+    background:none;
+    border: none;
+}
+.front2
+{
+    margin-top:30px;
+    text-align:center;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 40px;
+}
+.front2 i
+{
+    color:white;
+    font-size:5vw;
+}
+.social i{
+    padding-left:80px;
+    font-size:4vw;
+}
+.dol
+{
+    color:#2f5234;
+    padding-top:70px;
+    text-align:center;
+    font-family: 'Great Vibes';
+    font-size:3vw;
+}
+.dol1
+{
+    color:#2f5234;
+
+    padding-top:70px;
+    text-align:center;
+    font-family: 'Great Vibes';
+    font-size:3vw;
+}
+.tekst
+{
+    color:#2f5234;
+
+    font-family:Times New Roman;
+    text-align:center;
+    font-size:1.5vw;
+}
+.mapouter
+{
+    text-align:auto;
+    height: 50vh;    
+    width:100%;
+}
+.gmap_canvas 
+{
+    margin-top:50px;
+    overflow:hidden;
+    background:none!important;
+    height: 50vh;
+    width:100%;
+}
+iframe{
+    width:100%;
+    height:50vh; 
+}
+@media(max-width:1070px)
+{
+    .front{
+        font-size:8vw;
+        padding-right:35px;
+    }
+    .front1{
+        padding-right:35px;
+
+    }
+    .dol
+    {
+        font-size:5vw;
+    }
+    .dol1
+    {
+        font-size:5vw;
+    }
+    .tekst
+    {
+        font-size:3vw;
+    }
+}
+@media(max-width:561px)
+{
+    .front{
+        font-size:15vw;
+    }
+    .dol
+    {
+        font-size:10vw;
+    }
+    .tekst
+    {
+        font-size:4vw;
+    }
+
+}

@@ -13,12 +13,81 @@
     <div class="text-center">
         <h2 class=ornamentalHeading>Danie dnia</h2>
     </div>
+    <div class="row no-gutters">
+        <div class="col-0 col-md-1"></div>
+        <div class="col-12 col-md-4 dishPicture">
+            <img *ngIf="dishes" src="{{dishes.obrazek}}" alt="{{dishes.nazwa}}">
+        </div>
+        <div class="col-12 col-md-6 dishText">
+            <div *ngIf="dishes"><h1 class="dishName text-center">{{ dishes.nazwa }}</h1></div>
+            <div class="dishDescription text-center" *ngIf="dishes">{{ dishes.opis }}</div>
+        </div>
+    </div>
 </section>
 <section id="discoverUs" class="container-fluid">
-    
+    <div class="btn">Znajdź nas!</div>
 </section>
 <section id="menuCategories" class="container-fluid">
     <div class="text-center">
         <h2 class=ornamentalHeading>Kategorie</h2>
+    </div>
+            <!--<div *ngFor="let category of uniqueItems | filterUnique" class="col-sm-6">
+            {{ category.kategoria }}
+        </div>-->
+    <div class="row">
+        <div class="owl-carousel owl-theme owl-loaded owl-drag">
+            <!-- for -->
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-none d-lg-block col-lg-3 catImg">
+                        </div>
+                        <div class="col-12 col-lg-9 catDishList">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 item">
+                                        <div class="itemImage">
+                                            <img class="img-fluid" src="./assets/images/dania/comber_z_jelenia.jpg">
+                                        </div>
+                                        <div class="itemInfo">
+                                            <span class="name">nazwa<span class="price">$25</span></span>
+                                            <span class="description">Tekst.</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="itemImage">
+                                            <img class="img-fluid" src="./assets/images/dania/comber_z_jelenia.jpg">
+                                        </div>
+                                        <div class="itemInfo">
+                                            <span class="name">ONION AND NUTMEG SALAD<span class="price">$12</span></span>
+                                            <span class="description">Our 100% grass-fed hand-cut top sirloin is seared to lock in the juices.</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="itemImage">
+                                            <img class="img-fluid" src="./assets/images/dania/comber_z_jelenia.jpg">
+                                        </div>
+                                        <div class="itemInfo">
+                                            <span class="name">ONION AND NUTMEG SALAD<span class="price">$12</span></span>
+                                            <span class="description">Our 100% grass-fed hand-cut top sirloin is seared to lock in the juices.</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="itemImage">
+                                            <img class="img-fluid" src="./assets/images/dania/comber_z_jelenia.jpg">
+                                        </div>
+                                        <div class="itemInfo">
+                                            <span class="name">ONION AND NUTMEG SALAD<span class="price">$12</span></span>
+                                            <span class="description">Our 100% grass-fed hand-cut top sirloin is seared to lock in the juices.Our 100% grass-fed hand-cut top sirloin is seared to lock in the juices.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for -->
+        </div>
     </div>
 </section>

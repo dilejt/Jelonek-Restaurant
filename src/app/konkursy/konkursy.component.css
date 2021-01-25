@@ -5,7 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    height:110vh;
+    height:120vh;
   }
     
   #test{
@@ -37,7 +37,9 @@
   }
   .png{
     margin-top: 3vw;
+    margin-left: 7vw;
   }
+ 
   #label{
     
     color:rgb(202 138 91);
@@ -49,8 +51,10 @@
  
    @media (min-width: 991px) and (max-width: 1339px) { 
     .png{
-      margin-top: 5vw;
+      margin-top: 3vw;
+      margin-left: 0vw;
     }
+    
     .font{
       color:white;
       font-weight: bold;
@@ -75,7 +79,8 @@
  
    @media   (max-width: 990.99px) { 
     .png{
-      margin-top: 3vw;
+      margin-top: 0vw;
+      margin-left: 0vw;
     }
     .font{
       -webkit-text-stroke: 0px;
@@ -97,7 +102,11 @@
 
     #header{
      
-      height:180vw;
+      height:210vw;
+    }
+    #test{
+      padding-top: 10vh;
+      
     }
    }
  

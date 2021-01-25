@@ -63,7 +63,6 @@ header
 .dol1
 {
     color:#2f5234;
-
     padding-top:70px;
     text-align:center;
     font-family: 'Great Vibes';
@@ -131,5 +130,94 @@ iframe{
     {
         font-size:4vw;
     }
+}
+label
+{
+    font-family: 'Parisienne';
+    font-size: 5vh;
 
 }
+
+input
+{
+    border: none;
+    border-bottom: 1px solid #888;
+    background: transparent;
+}
+#scroll
+{
+    background: url('/assets/images/kontakt/forest_contact_main.png');
+    background-repeat:no-repeat ;
+    background-size:contain;
+    background-position: bottom;
+}
+button
+{
+    margin-bottom: 10px;
+}
+
+  
+ 
+
+.btn {
+    position: relative;
+    color: white;
+    width: 256px;
+    height: 64px;
+    line-height: 64px;
+    transition: all 0.3s;
+    
+  }
+  
+  .btn::before, .btn::after {
+    content: '';
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+ 
+  
+.btn-two::before, .btn-two::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s;
+    border: 1px solid rgb(146, 150,150);
+    text-align: center;
+    font-family: 'Dancing script';
+    font-size: 16px;
+  }
+  .btn-two:hover::after {
+    animation-name: rotatecw;
+    animation-duration: 2s;
+  }
+  .btn-two:hover::before {
+    animation-name: rotateccw; 
+    animation-duration: 3s;
+  }
+  .btn-two:hover::after, .btn-two:hover::before {
+    left: 96px;
+    width: 64px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes rotatecw {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+  }
+  
+  @keyframes rotateccw {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(-360deg);}
+  }
+  
+  

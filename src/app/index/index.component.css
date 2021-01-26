@@ -30,7 +30,7 @@ header > div{
 }
 .ornamentalHeading::before{
     content: '';
-    background-image: url("/assets/images/index/delimiter.png");
+    background-image: url("/assets/images/delimiter.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;

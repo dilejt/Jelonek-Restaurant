@@ -1,6 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
 header
 {
     width: auto;
@@ -11,88 +8,66 @@ header
     font-family: 'Great Vibes';
     background-position: center center;
     color:white;
-    background-blend-mode: darken;
 }
 .front
 {
-    font-size:5vw;
-    text-align:center;
-    padding-top:350px;
-    margin-left:auto;
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 350px;
+    margin-left: auto;
     margin-right: auto;
-    
 }
 .front1
 {
-    
-    text-align:center;
-    margin-left:auto;
+    text-align: center;
+    margin-left: auto;
     margin-right: auto;
     padding-left: 40px;
-}
-.front2 button
-{
-    background:none;
-    border: none;
-}
-.front2
-{
-    margin-top:30px;
-    text-align:center;
-    margin-left:auto;
-    margin-right: auto;
-    padding-left: 40px;
-}
-.front2 i
-{
-    color:white;
-    font-size:5vw;
 }
 .social i{
-    padding-left:80px;
-    font-size:4vw;
+    padding-left: 80px;
+    font-size: 4vw;
 }
 .dol
 {
     color:#2f5234;
-    padding-top:70px;
-    text-align:center;
+    padding-top: 70px;
+    text-align: center;
     font-family: 'Great Vibes';
-    font-size:3vw;
+    font-size: 3vw;
 }
 .dol1
 {
     color:#2f5234;
-    padding-top:70px;
-    text-align:center;
+    padding-top: 70px;
+    text-align: center;
     font-family: 'Great Vibes';
-    font-size:3vw;
+    font-size: 3vw;
 }
 .tekst
 {
     color:#2f5234;
-
-    font-family:Times New Roman;
-    text-align:center;
-    font-size:1.5vw;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 1.5vw;
 }
 .mapouter
 {
     text-align:auto;
     height: 50vh;    
-    width:100%;
+    width: 100%;
 }
 .gmap_canvas 
 {
-    margin-top:50px;
-    overflow:hidden;
-    background:none!important;
+    margin-top: 50px;
+    overflow: hidden;
+    background: none !important;
     height: 50vh;
-    width:100%;
+    width: 100%;
 }
 iframe{
-    width:100%;
-    height:50vh; 
+    width: 100%;
+    height: 50vh; 
 }
 @media(max-width:1070px)
 {
@@ -102,18 +77,14 @@ iframe{
     }
     .front1{
         padding-right:35px;
-
     }
-    .dol
-    {
+    .dol{
         font-size:5vw;
     }
-    .dol1
-    {
+    .dol1{
         font-size:5vw;
     }
-    .tekst
-    {
+    .tekst{
         font-size:3vw;
     }
 }
@@ -122,12 +93,10 @@ iframe{
     .front{
         font-size:15vw;
     }
-    .dol
-    {
+    .dol{
         font-size:10vw;
     }
-    .tekst
-    {
+    .tekst{
         font-size:4vw;
     }
 }
@@ -135,7 +104,6 @@ label
 {
     font-family: 'Parisienne';
     font-size: 5vh;
-
 }
 
 input
@@ -147,16 +115,13 @@ input
 #scroll
 {
     background: url('/assets/images/kontakt/forest_contact_main.png');
-    background-repeat:no-repeat ;
-    background-size:contain;
+    background-repeat: no-repeat ;
+    background-size: contain;
     background-position: bottom;
 }
-button
+.button
 {
     margin-bottom: 10px;
-}
-.button 
-{
 	border: 2px solid #2e2e2e;
 	cursor: pointer;
 	line-height: 1;
@@ -165,70 +130,22 @@ button
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	transition: 
-		background 5s cubic-bezier(0.19, 1, 0.22, 1),
-		border 1s cubic-bezier(0.19, 1, 0.22, 1),
-		color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     user-select: none;
     background-color: inherit;
-    float:right;
+    float: right;
 }
-
 .button a 
 {
 	color: #969696;
 	font-family: "Varela Round";
 	text-decoration: none;
 }
-
-.button .mask 
-{
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.5);
-	height: 100px;
-	position: absolute;
-	transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-	width: 200px;
-}
-
-.button .shift 
-{
-	display: inline-block;
-	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-	vertical-align: text-top;
-}
-
 .button:hover 
 {
-	background-color: rgba(255, 255, 255, 0.05);
 	border-color: #fff;
 	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
-	transition: background 0s;
 }
-
 .button:hover a 
 {
 	color: #fff;
-}
-
-.button:hover .mask 
-{
-	background-color: #fff;
-	transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
-}
-
-.button:hover .shift 
-{
-	transform: translateX(5px);
-}
-
-.button:active 
-{
-	background-color: #fff;
-}
-
-.button:active a 
-{
-	color: #202020;
 }

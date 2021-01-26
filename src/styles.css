@@ -10,6 +10,10 @@
     font-family: "Dancing Script";
     src: url("/assets/fonts/DancingScript/DancingScript-VariableFont_wght.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Cardo";
+    src: url("/assets/fonts/Cardo/Cardo-Italic.ttf") format("truetype");
+}
 body{
     color: black;
 }

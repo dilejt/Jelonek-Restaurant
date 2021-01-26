@@ -1,16 +1,15 @@
 
 header
 {
-    padding-top: 5% ;
-    background-image: url("/assets/images/news/sala2.png");
-    width: auto;
-    height: 100vh;
-    object-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Great Vibes';
-    background-position: center center;
-    color:white
-
+  padding-top: 5% ;
+  background-image: url("/assets/images/news/salaBg.jpg");
+  width: auto;
+  height: 100vh;
+  object-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Great Vibes';
+  background-position: center center;
+  color:white;
 }
 .news_left
 {
@@ -24,7 +23,6 @@ header
   float: right;
   clear: both;
 }
-
 img
 {
   float:right;
@@ -34,8 +32,8 @@ img
 }
 .col-md-9
 {
-  opacity: 1.0;
-  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("/assets/images/news/lejens1.png");
+  opacity: 1;
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("/assets/images/news/deerBg.png");
   background-repeat: no-repeat;
   background-size:contain;
   background-position: center center;
@@ -53,44 +51,40 @@ img
   font-size: large;
 }
 .container {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    border-radius: 0.3rem;
-    font-family: 'Cardo';
-    font-size: 24px;
-    font-weight: normal;
-  }
- .row
- {
-   font-size: 4vh;
- }
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  font-family: 'Cardo';
+  font-size: 24px;
+  font-weight: normal;
+}
+.row
+{
+  font-size: 4vh;
+}
 
-  .ornamentalHeading{
-    
-    font-size: 10vw;
-    font-family: 'Great Vibes';
-    text-align: center;
+.ornamentalHeading{
+  font-size: 10vw;
+  font-family: 'Great Vibes';
+  text-align: center;
 }
 @media (min-width: 1200px) {
-    .ornamentalHeading{
-        font-size: 4vw;
-    }
-    
+  .ornamentalHeading{
+      font-size: 4vw;
+  }
 }
 @media (max-width:600px)
 {
-  img
-    {
-      display: block;
-      margin-left: auto;
-      margin-right: 25%;
-      
-    }
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: 25%;
+  }
 }
 
 .ornamentalHeading::before{
     content: '';
-    background-image: url("/assets/images/index/delimiter.png");
+    background-image: url("/assets/images/delimiter.png");
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center center;

@@ -24,14 +24,6 @@ header
   float: right;
   clear: both;
 }
-
-img
-{
-  float:right;
-  border-radius: 50%;
-  width: auto;
-  max-width: 200px;
-}
 .col-md-9
 {
   opacity: 1.0;
@@ -52,7 +44,8 @@ img
 {
   font-size: large;
 }
-.container {
+.container 
+{
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: 0.3rem;
@@ -71,7 +64,15 @@ img
     font-family: 'Great Vibes';
     text-align: center;
 }
-@media (min-width: 1200px) {
+img
+{
+  float:right;
+  border-radius: 50%;
+  width: auto;
+  max-width: 200px;
+}
+@media (min-width: 1200px) 
+{
     .ornamentalHeading{
         font-size: 4vw;
     }

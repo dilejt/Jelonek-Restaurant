@@ -13,12 +13,58 @@
     <div class="text-center">
         <h2 class=ornamentalHeading>Danie dnia</h2>
     </div>
+    <div class="row no-gutters">
+        <div class="col-0 col-md-1"></div>
+        <div class="col-12 col-md-4 dishPicture">
+            <img *ngIf="dishOfTheDay" class="rounded" src="{{dishOfTheDay.img}}" alt="{{dishOfTheDay.nazwa}}">
+        </div>
+        <div class="col-12 col-md-6 dishText">
+            <div *ngIf="dishOfTheDay">
+                <h1 class="dishName text-center">{{ dishOfTheDay.nazwa }}</h1>
+            </div>
+            <div class="dishDescription text-center" *ngIf="dishOfTheDay">{{ dishOfTheDay.opis }}</div>
+        </div>
+    </div>
 </section>
 <section id="discoverUs" class="container-fluid">
-
+    <div class="btn">Znajdź nas!</div>
 </section>
 <section id="menuCategories" class="container-fluid">
     <div class="text-center">
         <h2 class=ornamentalHeading>Kategorie</h2>
+    </div>
+    <div class="row">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let category of categories | filterUnique">
+                <div class="slide">
+                    <div class="item">
+                        <div class="container">
+                            <div class="row carouselDiv">
+                                <div class="d-none d-lg-block col-lg-3 catImg" [ngStyle]="{ 'background-image': 'url(' + category.catimg + ')'}">
+                                    <div class="catText text-center">{{ category.kategoria }}</div>
+                                </div>
+                                <div class="col-12 col-lg-9 catDishList">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 item" *ngFor="let dish of filterByCategory(category.idkategoria);  let i=index">
+                                                <div *ngIf="i<4">
+                                                    <div class="itemImage">
+                                                        <img class="img-fluid rounded" src="{{dish.img}}">
+                                                    </div>
+                                                    <div class="itemInfo">
+                                                        <div class="name text-center">{{ dish.nazwa }}<div class="price">{{ dish.cena }} zł</div></div>
+                                                        <div class="description text-center">{{ dish.opis }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
     </div>
 </section>

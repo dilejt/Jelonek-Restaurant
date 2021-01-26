@@ -8,6 +8,9 @@ import { MenuComponent } from './menu/menu.component';
 import { KonkursyComponent } from './konkursy/konkursy.component';
 import { IndexComponent } from './index/index.component';
 import { OnasComponent } from './onas/onas.component';
+import { FilterPipe } from './index/uniqueFilter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NewsComponent } from './news/news.component';
 
 @NgModule({
@@ -18,11 +21,14 @@ import { NewsComponent } from './news/news.component';
     KonkursyComponent,
     IndexComponent,
     OnasComponent,
+    FilterPipe,
     NewsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

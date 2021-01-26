@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { NewsComponent } from './news/news.component';
 import { IndexComponent } from './index/index.component';
 import { OnasComponent } from './onas/onas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: 'kontakt', component: KontaktComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [HttpClientModule,RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

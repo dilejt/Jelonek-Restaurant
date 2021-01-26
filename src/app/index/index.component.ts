@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-declare var $: any;
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-index',
@@ -10,39 +10,38 @@ declare var $: any;
 
 export class IndexComponent implements OnInit {
 
-  dishes: any;
-  dishesQuantity : any;
   categories : any;
-  uniqueItems: any;
+  dishOfTheDay : any;
 
+  customOptions: OwlOptions = {
+    autoHeight: false,
+    autoWidth: true,
+    center: true,
+    loop: true,
+    margin: 100,
+    nav: false,
+    merge: true,
+    dots: true,
+    autoplay: false,
+    items: 1
+  }
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:3300').toPromise().then((app) => {
-      this.dishes = (app as any);
       this.categories = (app as any);
-      this.dishesQuantity = this.dishes.length;
-      let random = Math.floor(Math.random() * this.dishesQuantity);
-      this.dishes = this.dishes[random];
-      
-      this.uniqueItems = this.categories;
-    });
-    
-    $('.owl-carousel').owlCarousel({
-      loop:false,
-      margin:10,
-      nav:false,
-      merge:true,
-      autoplay:false, //TODO true
-      autoplayTimeout:4000,
-      items:1
-    });
 
-
+      let dishes = (app as any);
+      let dishesQuantity = dishes.length;
+      let random = Math.floor(Math.random() * dishesQuantity);
+      this.dishOfTheDay = dishes[random];   
+    });
 
   }
-
+  filterByCategory(type : any){
+    return this.categories.filter((x : any) => x.idkategoria == type);
+  }
   
 }
 

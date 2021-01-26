@@ -51,8 +51,12 @@ nav button{
         margin-bottom: 20px;
     }
 }
-
 footer{
-    background-color: #01283b;
-    height: 400px;
+    background-image: url("/assets/images/footer.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vw;
+    z-index: 3;
 }
+

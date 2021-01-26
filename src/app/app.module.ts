@@ -9,6 +9,8 @@ import { KonkursyComponent } from './konkursy/konkursy.component';
 import { IndexComponent } from './index/index.component';
 import { OnasComponent } from './onas/onas.component';
 import { FilterPipe } from './index/uniqueFilter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FilterPipe } from './index/uniqueFilter.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

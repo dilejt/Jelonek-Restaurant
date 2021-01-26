@@ -228,6 +228,7 @@ button
 	background-color: #fff;
 }
 
-.button:active a {
+.button:active a 
+{
 	color: #202020;
 }

@@ -11,6 +11,7 @@ import { OnasComponent } from './onas/onas.component';
 import { FilterPipe } from './index/uniqueFilter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     KonkursyComponent,
     IndexComponent,
     OnasComponent,
-    FilterPipe
+    FilterPipe,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

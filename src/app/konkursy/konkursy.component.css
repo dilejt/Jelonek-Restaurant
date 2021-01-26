@@ -5,11 +5,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    height:110vh;
+    height:120vh;
   }
     
   #test{
-    padding-top: 14vh;
+    padding-top: 15vh;
     font-size: 3vh;
     padding-bottom: 5vh;
   }
@@ -35,6 +35,11 @@
     -o-transform: rotate(-6deg);
     transform: rotate(-6deg);
   }
+  .png{
+    margin-top: 3vw;
+    margin-left: 7vw;
+  }
+ 
   #label{
     
     color:rgb(202 138 91);
@@ -43,7 +48,40 @@
     font-weight: bold;
     padding-top: 10vh;
   }
-  @media (max-width: 730px) and (max-width: 787.98px) { 
+ 
+   @media (min-width: 991px) and (max-width: 1339px) { 
+    .png{
+      margin-top: 3vw;
+      margin-left: 0vw;
+    }
+    
+    .font{
+      color:white;
+      font-weight: bold;
+      font-family: Helvetica, sans-serif;
+      padding-left:5vh ;
+      -webkit-transform: rotate(-6deg);
+      -moz-transform: rotate(-6deg);
+      -ms-transform: rotate(-6deg);
+      -o-transform: rotate(-6deg);
+      transform: rotate(-6deg);
+    }
+    p{
+      font-size:3vw;
+      -webkit-text-stroke:0px;
+    }
+    #label {
+      font-size:7vw;
+    }
+  
+
+   }
+ 
+   @media   (max-width: 990.99px) { 
+    .png{
+      margin-top: 0vw;
+      margin-left: 0vw;
+    }
     .font{
       -webkit-text-stroke: 0px;
       padding-left:6vh ;
@@ -54,13 +92,22 @@
       transform: rotate(0);
     }
     p{
-      font-size:5vw;
-      -webkit-text-stroke:0px black; 
+      padding-top:2vw;
+      font-size:4vw;
+      -webkit-text-stroke:0px
     }
     #label {
       font-size:7vw;
     }
 
+    #header{
+     
+      height:210vw;
+    }
+    #test{
+      padding-top: 10vh;
+      
+    }
    }
  
   

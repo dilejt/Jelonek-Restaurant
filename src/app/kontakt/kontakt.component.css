@@ -155,69 +155,79 @@ button
 {
     margin-bottom: 10px;
 }
+.button 
+{
+	border: 2px solid #2e2e2e;
+	cursor: pointer;
+	line-height: 1;
+	overflow: hidden;
+	padding: 20px 30px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 
+		background 5s cubic-bezier(0.19, 1, 0.22, 1),
+		border 1s cubic-bezier(0.19, 1, 0.22, 1),
+		color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    user-select: none;
+    background-color: inherit;
+    float:right;
+}
 
-  
- 
+.button a 
+{
+	color: #969696;
+	font-family: "Varela Round";
+	text-decoration: none;
+}
 
-.btn {
-    position: relative;
-    color: white;
-    width: 256px;
-    height: 64px;
-    line-height: 64px;
-    transition: all 0.3s;
-    
-  }
-  
-  .btn::before, .btn::after {
-    content: '';
-    position: absolute;
-    transition: all 0.3s;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
- 
-  
-.btn-two::before, .btn-two::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    transition: all 0.3s;
-    border: 1px solid rgb(146, 150,150);
-    text-align: center;
-    font-family: 'Dancing script';
-    font-size: 16px;
-  }
-  .btn-two:hover::after {
-    animation-name: rotatecw;
-    animation-duration: 2s;
-  }
-  .btn-two:hover::before {
-    animation-name: rotateccw; 
-    animation-duration: 3s;
-  }
-  .btn-two:hover::after, .btn-two:hover::before {
-    left: 96px;
-    width: 64px;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-  
-  @keyframes rotatecw {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(360deg);}
-  }
-  
-  @keyframes rotateccw {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(-360deg);}
-  }
-  
-  
+.button .mask 
+{
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 100px;
+	position: absolute;
+	transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+	width: 200px;
+}
+
+.button .shift 
+{
+	display: inline-block;
+	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+	vertical-align: text-top;
+}
+
+.button:hover 
+{
+	background-color: rgba(255, 255, 255, 0.05);
+	border-color: #fff;
+	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+	transition: background 0s;
+}
+
+.button:hover a 
+{
+	color: #fff;
+}
+
+.button:hover .mask 
+{
+	background-color: #fff;
+	transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+}
+
+.button:hover .shift 
+{
+	transform: translateX(5px);
+}
+
+.button:active 
+{
+	background-color: #fff;
+}
+
+.button:active a {
+	color: #202020;
+}

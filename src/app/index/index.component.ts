@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {gsap} from 'gsap'
+declare var $: any;
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
+
 
 export class IndexComponent implements OnInit {
 
@@ -26,6 +29,7 @@ export class IndexComponent implements OnInit {
     items: 1
   }
 
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -37,12 +41,12 @@ export class IndexComponent implements OnInit {
       let random = Math.floor(Math.random() * dishesQuantity);
       this.dishOfTheDay = dishes[random];   
     });
-
+    gsap.from(".animation",{duration:2,opacity:0,y:-50,scale:0.7,ease:"back"});
   }
   filterByCategory(type : any){
     return this.categories.filter((x : any) => x.idkategoria == type);
   }
   
+  
 }
-
 

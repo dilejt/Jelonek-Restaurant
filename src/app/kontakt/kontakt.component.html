@@ -15,8 +15,8 @@
 </header>
 <section  id="scroll" class="container" >
     <div  class="container-flex">
-        <div  class="row">
-            <div class="col-sm">
+        <div  class="row"  >
+            <div class="col-sm" data-aos="fade-right">
                 <p class="dol">Restauracja Polska Jelonek</p>
                 <p class="tekst">UL. KOMEŃSKIEGO 3/4</p>
                 <p class="tekst">82-300 ELBLĄG</p>
@@ -25,7 +25,7 @@
                 <p class="tekst">JELONEK@gmail.com</p>
 
             </div>
-            <div class="col-sm">
+            <div class="col-sm" data-aos="fade-left">
                 <p class="dol1">Godziny otwarcia:</p>
                 <p class="tekst">PONIEDZIAŁEK/PIĄTEK: 10:00-18:00</p>
                 <p class="tekst">SOBOTA/NIEDZIELA: 12:00-16:00</p>
@@ -36,33 +36,33 @@
                 </p>
             </div>
             </div> 
-            <div class="row">
+            <div class="row end" data-aos="fade-up">
                 <div class="col-sm">
-                    <p class="dol">Formularz kontaktowy</p>
+                    <p class="dol anim1 " ><span>Formularz kontaktowy</span></p>
                     <form>
                         <div class="form-group">
-                            <label for="InputName">Imie</label>
-                            <input class="form-control" id="InputName" type="text" placeholder="Tutaj wpisz imie" name="name">
+                            <label for="InputName " class="anim1"><span>Imie</span></label>
+                            <input class="form-control anim1" id="InputName" type="text" placeholder="Tutaj wpisz imie" name="name">
                         </div>
                         <div class="form-group">
-                            <label for="InputEmail">Adres E-mail</label>
-                            <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Tutaj wpisz adres e-mail">
+                            <label for="InputEmail" class="anim1">Adres E-mail</label>
+                            <input type="email" name="email" class="form-control anim1" id="InputEmail" aria-describedby="emailHelp" placeholder="Tutaj wpisz adres e-mail">
                         </div>
                         <div class="form-group">
-                            <label for="InputSubject">Temat</label>
-                            <input type="text" name="subject" class="form-control" id="InputSubject" placeholder="Tutaj wpisz adres temat">
+                            <label for="InputSubject" class="anim1">Temat</label>
+                            <input type="text" name="subject" class="form-control anim1" id="InputSubject" placeholder="Tutaj wpisz adres temat">
                         </div>
                         <div class="form-group">
-                            <label for="FormControlTextarea">Wiadomość</label>
-                            <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control" id="FormControlTextarea" rows="3"></textarea>
+                            <label for="FormControlTextarea" class="anim1">Wiadomość</label>
+                            <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control anim1" id="FormControlTextarea" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="button">Wyślij</button>
+                        <button type="submit" class="button anim1">Wyślij</button>
                     </form>
                 </div>
         </div>
     </div>
 </section>
-<section>
+<section data-aos="fade-up">
     <div class="mapouter">
         <div class="gmap_canvas">
             <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=ul.kome%C5%84skiego,%20Elbl%C4%85g%20&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
@@ -71,3 +71,4 @@
         </div>
     </div>
 </section>
+

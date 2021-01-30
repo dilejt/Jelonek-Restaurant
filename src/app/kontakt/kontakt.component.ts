@@ -3,7 +3,8 @@ import * as AOS from 'aos';
 import { gsap } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+declare var $: any;
 @Component({
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
@@ -11,6 +12,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
   animations: []
 })
 export class KontaktComponent implements OnInit {
+  public sendEmail(e: Event) {
+    e.preventDefault();
+    emailjs.sendForm('service_j2x8r1d', 'template_irk4mw1', e.target as HTMLFormElement, 'user_AiaCcuoHWj0ESy1Z8X13w')
+      .then((result: EmailJSResponseStatus) => {
+        $("#walidacja").html("wysłano poprawnie");        
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+        $("#walidacja").html("błąd przy wysyłaniu ");        
+      });
+  }
 
   constructor() { }
 
@@ -37,6 +49,7 @@ function f1()
 
 function animacja()
 {
+  
   let mql = window.matchMedia('(max-width: 600px)');
   if(mql.matches==false)
   {
@@ -45,7 +58,7 @@ function animacja()
      let tl = gsap.timeline({
       scrollTrigger:{
         trigger:".anim1",
-        pin:false,
+        pin:false,  
         start:"bottom bottom",
       }
      });

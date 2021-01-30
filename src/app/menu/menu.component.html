@@ -1,0 +1,52 @@
+<header></header>
+<section id="menu">
+    <div *ngFor="let category of categories | filterUnique; let j=index; let k=index">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 ornamentalHeading" [ngStyle]="{ 'background-image': 'url(/assets/images/menu/' + j + '.jpg)'}">
+                    <div class="parallax"></div>
+                    <div class="text-center">{{ category.kategoria }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <img [src]='"assets/images/menu/"+k+".png"' class="decorationImgs" id="decorationImg{{k}}">
+            <div *ngFor="let dish of filterByCategory(category.idkategoria); let i=index">
+                <div class="d-none d-lg-none d-xl-block">
+                    <div class="row no-gutters" *ngIf="i%2==0">
+                        <div class="col-6 border-right border-success">
+                            <img class="img-fluid rounded float-left" src="{{dish.img}}">
+                        </div>
+                        <div class="col-6 border-success">
+                            <div class="text-left pl-4 pt-5 font-weight-bold dishName">{{ dish.nazwa }}</div>
+                            <div class="text-left pl-4 pt-5 dishPrice">{{ dish.cena }} zł</div>
+                            <div class="text-left pl-4 pt-5 font-italic">{{ dish.opis }}</div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters" *ngIf="i%2!=0">
+                        <div class="col-6 border-right border-success">
+                            <div class="text-right pr-4 pt-5 font-weight-bold dishName">{{ dish.nazwa }}</div>
+                            <div class="text-right pr-4 pt-5 dishPrice">{{ dish.cena }} zł</div>
+                            <div class="text-right pr-4 pt-5 font-italic">{{ dish.opis }}</div>
+                        </div>
+                        <div class="col-6 border-success">
+                            <img class="img-fluid rounded float-right" src="{{dish.img}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-block d-lg-block d-xl-none">
+                    <div class="row no-gutters text-center">
+                        <div class="col-12">
+                            <img class="img-fluid rounded" src="{{dish.img}}">
+                        </div>
+                        <div class="col-12">
+                            <div class="pt-3 font-weight-bold dishName">{{ dish.nazwa }}</div>
+                            <div class="dishPrice">{{ dish.cena }} zł</div>
+                            <div class="pt-3 pr-5 pl-5 pb-5 font-italic">{{ dish.opis }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

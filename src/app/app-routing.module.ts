@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { NewsComponent } from './news/news.component';
 import { IndexComponent } from './index/index.component';
 import { OnasComponent } from './onas/onas.component';
+import { OpinieComponent } from './opinie/opinie.component';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'konkursy', component: KonkursyComponent},
   { path: 'onas', component: OnasComponent},
   { path: 'news', component: NewsComponent},
+  { path: 'opinie', component: OpinieComponent},
   { path: '', component: IndexComponent}
 ];
 

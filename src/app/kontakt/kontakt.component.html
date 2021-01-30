@@ -39,10 +39,10 @@
             <div class="row end" data-aos="fade-up">
                 <div class="col-sm">
                     <p class="dol anim1 " ><span>Formularz kontaktowy</span></p>
-                    <form>
+                    <form (submit)="sendEmail($event)">
                         <div class="form-group">
                             <label for="InputName " class="anim1"><span>Imie</span></label>
-                            <input class="form-control anim1" id="InputName" type="text" placeholder="Tutaj wpisz imie" name="name">
+                            <input class="form-control anim1" id="InputName" type="text" placeholder="Tutaj wpisz imie" name="imie">
                         </div>
                         <div class="form-group">
                             <label for="InputEmail" class="anim1">Adres E-mail</label>
@@ -50,13 +50,15 @@
                         </div>
                         <div class="form-group">
                             <label for="InputSubject" class="anim1">Temat</label>
-                            <input type="text" name="subject" class="form-control anim1" id="InputSubject" placeholder="Tutaj wpisz adres temat">
+                            <input type="text" name="temat" class="form-control anim1" id="InputSubject" placeholder="Tutaj wpisz adres temat">
                         </div>
                         <div class="form-group">
+                            <label id="tekst"></label>
                             <label for="FormControlTextarea" class="anim1">Wiadomość</label>
                             <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control anim1" id="FormControlTextarea" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="button anim1">Wyślij</button>
+                        </div><label id="walidacja"></label>
+                        <input type="submit" class="btn button anim1">
+                        
                     </form>
                 </div>
         </div>
@@ -71,4 +73,8 @@
         </div>
     </div>
 </section>
-
+<script type="text/javascript">
+    (function(){
+       emailjs.init("user_AiaCcuoHWj0ESy1Z8X13w");
+    })();
+ </script>

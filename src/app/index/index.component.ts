@@ -2,7 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import {gsap} from 'gsap'
+<<<<<<< Updated upstream
 declare var $: any;
+=======
+import * as AOS from 'aos';
+
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-index',

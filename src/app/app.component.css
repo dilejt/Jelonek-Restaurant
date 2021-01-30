@@ -6,7 +6,6 @@ nav{
     font-size: 1.5em;
     font-family: 'Parisienne';
     font-weight: 700;
-    
 }
 nav a {
     color: #2a373b !important;
@@ -60,4 +59,61 @@ footer{
     background-repeat: no-repeat;
     height: 50vw;
     z-index: 3;
+    position: relative;
+}
+.footerContent{
+    width: 100%;
+    position: absolute;
+    bottom: 0
+}
+
+.copyRight{
+    background-color: rgba(0, 0, 0, .3);
+}
+footer .visitText{
+    font-size: 2vw;
+    font-family: 'Cardo';
+}
+@media (max-width: 575.98px) {
+    footer .visitText{
+        display: none;
+    }
+    .fab{
+        font-size: 1.5em !important;
+    }
+}
+@media (max-width: 425px) {
+    .socialMediaText{
+        display: none;
+    }
+}
+.visitText span{
+    font-size: 3vw;
+}
+.fab{
+    font-size: 2em;
+}
+footer a{
+    color: white !important;
+    text-decoration: none;
+}
+footer a:hover{
+    color: rgb(0, 255, 42) !important;
+}
+@media (min-width: 992px) {
+    .fab{
+        font-size: 3em;
+    }
+    .footerContent > .container-fluid{
+        padding-bottom: 3rem;
+    }
+    footer .visitText{
+        font-size: 20px;
+    }
+    .visitText span{
+        font-size: 30px;
+    }
+}
+.socialMediaText{
+    padding-top: 4rem;
 }

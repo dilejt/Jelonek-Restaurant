@@ -8,15 +8,24 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class MenuComponent implements OnInit {
-
-  odpowiedz: any;
+  categories : any;
+  dishOfTheDay : any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:3300').toPromise().then((app) => {
-      this.odpowiedz = (app as any);
+      this.categories = (app as any);
+
+      let dishes = (app as any);
+      let dishesQuantity = dishes.length;
+      let random = Math.floor(Math.random() * dishesQuantity);
+      this.dishOfTheDay = dishes[random];   
     });
   }
-
+  filterByCategory(type : any){
+    return this.categories.filter((x : any) => x.idkategoria == type);
+  }
+  
+  
 }

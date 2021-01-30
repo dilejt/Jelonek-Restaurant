@@ -12,6 +12,7 @@ import { FilterPipe } from './index/uniqueFilter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NewsComponent } from './news/news.component';
+import { OpinieComponent } from './opinie/opinie.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NewsComponent } from './news/news.component';
     IndexComponent,
     OnasComponent,
     FilterPipe,
-    NewsComponent
+    NewsComponent,
+    OpinieComponent
   ],
   imports: [
     BrowserModule,

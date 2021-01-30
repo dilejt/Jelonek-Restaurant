@@ -1,19 +1,46 @@
-<header>
+
+<!-- <div id="cooking" class="">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div id="area">
+            <div id="sides">
+                <div id="pan"></div>
+                <div id="handle"></div>
+            </div>
+            <div id="pancake">
+                <div id="pastry"></div>
+            </div>
+        </div>
+</div>
+<div id="loader-wrap" class="loader-wrap">
+    <div id="loader-wrap" class="bar"></div>
+    <div id="loader-wrap" class="text">loading</div>
+</div>   -->
+
+<header id="myHeader" class="animation">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-8 col-md-6 col-lg-4">
-                <h1>Zagłęb się w kuchnię polską i odkryj niespotykane dotąd doznania smakowe</h1>
+            <div class="col-lg-3 col-1"></div>
+            <div class="col-lg-6 col-10 text-center">
+                <div>Zagłęb się w kuchnię polską i odkryj niespotykane dotąd doznania smakowe</div>
+                <hr>
+                <div class="headerDescription">Smak & Tradycja & Pasja</div>
             </div>
-            <div class="col-3 col-md-5 col-lg-7"></div>
+            <div class="col-lg-3 col-1"></div>
         </div>
     </div>
+    <a href="#specialDish">
+        <img class="scrollMouse" src="/assets/images/index/scrolldown.png">
+    </a>
 </header>
-<section id="specialDish" class="container-fluid">
+<section id="specialDish" class="container-fluid" >
     <div class="text-center">
-        <h2 class=ornamentalHeading>Danie dnia</h2>
+        <h2 class=ornamentalHeading data-aos="fade-down">Danie dnia</h2>
     </div>
-    <div class="row no-gutters">
+    <div class="row no-gutters" data-aos="fade-right">
         <div class="col-0 col-md-1"></div>
         <div class="col-12 col-md-4 dishPicture">
             <img *ngIf="dishOfTheDay" class="rounded" src="{{dishOfTheDay.img}}" alt="{{dishOfTheDay.nazwa}}">
@@ -26,17 +53,17 @@
         </div>
     </div>
 </section>
-<section id="discoverUs" class="container-fluid">
-    <div class="btn">Znajdź nas!</div>
+<section id="discoverUs" class="container-fluid "> 
+    <div class="btn" data-aos="fade-down">Znajdź nas!</div>
 </section>
-<section id="menuCategories" class="container-fluid">
+<section id="menuCategories" class="container-fluid " >
     <div class="text-center">
-        <h2 class=ornamentalHeading>Kategorie</h2>
+        <h2 class=ornamentalHeading data-aos="fade-down">Kategorie</h2>
     </div>
     <div class="row">
         <owl-carousel-o [options]="customOptions">
             <ng-template carouselSlide *ngFor="let category of categories | filterUnique">
-                <div class="slide">
+                <div class="slide" data-aos="fade-left">
                     <div class="item">
                         <div class="container">
                             <div class="row carouselDiv">

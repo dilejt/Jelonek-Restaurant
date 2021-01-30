@@ -1,89 +1,77 @@
 #header{
-    background-image: url("/assets/images/onas/wall.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: auto;
-    height: auto;
-
-    
+  background-image: url("/assets/images/onas/wall.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
 }
 font{
-  font-weight: bold;
+font-weight: bold;
 }
 #test{
-  padding-top: 20vh;
-  font-size: 3vh;
-  padding-bottom: 5vh;
+padding-top: 20vh;
+font-size: 3vh;
+padding-bottom: 5vh;
 }
 #tabela{
-  border-spacing: 15px;
+border-spacing: 15px;
 }
 b,p{
-  font-family: 'Dancing Script';
+font-family: 'Dancing Script';
 }
 .buttons {
-    overflow: hidden;
-    position: fixed;
-    top:80% ;
-    left:78%;
-    z-index: 4;
-    
-    
-  }
-  .resp{
-    max-width: 100%;
-    
-  }
-  .pic{
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .opacity {
-      background-color: transparent;
-    background: rgba(255, 255, 255, 0.4) !important;
-    backdrop-filter: blur(10px);
-  }
-  .card,.row {
-    background-color: transparent;
+  overflow: hidden;
+  position: fixed;
+  top:80% ;
+  left:78%;
+  z-index: 4;
+}
+.resp{
+  max-width: 100%;
   
 }
-  .col-sm-6{
-    background-color: none !important;
-    
-  }
-  
-  
-  .buttons button{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    margin-right: 20%;
-    margin-bottom: 5px;
-    
-    
-  }
-  
-  .buttons button:hover {
-    background: #ddd;
-    color: black;
-  }
+.pic{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.opacity {
+    background-color: transparent;
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(10px);
+}
+.card,.row {
+  background-color: transparent;
 
-  #content{
-      padding-top: 10%;
-      width: 50%;
-      
-      
-      margin: auto;
-      width: 50%;
-     
-  }
-  .col-sm{
-    font-size: 4vh;
-  }
-
+}
+.col-sm-6{
+  background-color: none !important;
   
+}
+.buttons button{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 20%;
+  margin-bottom: 5px;
+}
+.buttons button:hover {
+  background: #ddd;
+  color: black;
+}
+#content{
+  padding-top: 10%;
+  width: 50%;
+  margin: auto;
+  width: 50%;
+}
+.col-sm{
+  font-size: 4vh;
+}
+footer{
+  background-image: url("/assets/images/footer.png"), url("/assets/images/onas/wallFooter.jpg");
+}

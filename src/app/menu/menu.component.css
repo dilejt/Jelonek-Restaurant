@@ -63,49 +63,55 @@ header{
     font-family: "Great Vibes";
 }
 .decorationImgs{
-    position: absolute;
-    z-index: -1;
+    display: none;
 }
-#decorationImg0{
-    top: 1100px;
-    right: -50px;
-    width: auto;
-    height: 500px;
-}
-#decorationImg1{
-    top: 4400px;
-    left: 1vw;
-    width: 350px;
-    height: auto;
-}
-#decorationImg2{
-    top: 7400px;
-    right: 1vw;
-    width: 300px;
-    height: auto;
-}
-#decorationImg3{
-    top: 9000px;
-    left: 1vw;
-    width: 400px;
-    height: auto;
-}
-#decorationImg4{
-    top: 11900px;
-    right: 1vw;
-    width: 400px;
-    height: auto;
-    transform: rotate(210deg);
-}
-#decorationImg5{
-    top: 14900px;
-    left: 1vw;
-    width: 400px;
-    height: auto;
-}
-#decorationImg6{
-    top: 15900px;
-    right: 1vw;
-    width: 400px;
-    height: auto;
+@media (min-width: 1850px) {
+    .decorationImgs{
+        position: absolute;
+        z-index: -1;
+        display: block;
+    }
+    #decorationImg0{
+        top: 1100px;
+        right: -50px;
+        width: auto;
+        height: 500px;
+    }
+    #decorationImg1{
+        top: 4400px;
+        left: 1vw;
+        width: 350px;
+        height: auto;
+    }
+    #decorationImg2{
+        top: 7400px;
+        right: 1vw;
+        width: 300px;
+        height: auto;
+    }
+    #decorationImg3{
+        top: 9000px;
+        left: 1vw;
+        width: 400px;
+        height: auto;
+    }
+    #decorationImg4{
+        top: 11900px;
+        right: 1vw;
+        width: 400px;
+        height: auto;
+        transform: rotate(210deg);
+    }
+    #decorationImg5{
+        top: 14900px;
+        left: 1vw;
+        width: 400px;
+        height: auto;
+    }
+    #decorationImg6{
+        top: 15700px;
+        right: 1vw;
+        width: 350px;
+        height: auto;
+    }
 }

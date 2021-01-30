@@ -25,7 +25,7 @@ p{
   padding-left:5vh ;
   transform: rotate(-6deg);
 }
-.png{
+.paczki{
   margin-top: 3vw;
   margin-left: 7vw;
 }
@@ -37,7 +37,7 @@ p{
   padding-top: 10vh;
 }
 @media (min-width: 991px) and (max-width: 1339px) { 
-  .png{
+  .paczki{
     margin-top: 3vw;
     margin-left: 0vw;
   }
@@ -57,15 +57,15 @@ p{
   }
 }
 
-@media   (max-width: 990.99px) { 
-  .png{
+@media (max-width: 990.99px) { 
+  .paczki{
     margin-top: 0vw;
     margin-left: 0vw;
   }
   .font{
     -webkit-text-stroke: 0px;
     padding-left: 6vh ;
-    transform: rotate(0);
+    transform: none;
   }
   p{
     padding-top: 2vw;
@@ -82,4 +82,32 @@ p{
     padding-top: 10vh;  
   }
 }
-
+#connector{
+  position: absolute;
+  top: 610px;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 10;
+}
+@media (max-width: 1635px) { 
+  #connector{
+    top: 710px;
+  }
+}
+@media (max-width: 1350px) { 
+  #connector{
+    top: 800px;
+  }
+}
+@media (max-width: 991.98px) {
+  #connector{
+    top: 180vw;
+  }
+}
+@media (max-width: 575.98px) {
+  .imgs{
+    width: 70vw;
+    height: auto;
+  }
+}

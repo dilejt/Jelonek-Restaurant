@@ -14,8 +14,12 @@
     font-family: "Cardo";
     src: url("/assets/fonts/Cardo/Cardo-Italic.ttf") format("truetype");
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     color: black;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;

@@ -12,14 +12,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 })
 export class KontaktComponent implements OnInit {
 
-  constructor( ) { }
-  
+  constructor() { }
+
   ngOnInit(): void {
-    f1() 
+    f1();
     animacja();
   }
- 
+  
 }
+
 function f1()
 {
   AOS.init({
@@ -31,31 +32,27 @@ function f1()
       let maxWidth = 1355;
       return window.innerWidth < maxWidth;
     },
-  }
-  )
-
+  })
 }
+
 function animacja()
 {
   let mql = window.matchMedia('(max-width: 600px)');
   if(mql.matches==false)
   {
     gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
-    //  let tl = gsap.timeline({defaults:{duration: 1}});
+
      let tl = gsap.timeline({
-     scrollTrigger:{
-       trigger:".anim1",
-       pin:false,
-       start:"bottom bottom",
-     }
-     })
+      scrollTrigger:{
+        trigger:".anim1",
+        pin:false,
+        start:"bottom bottom",
+      }
+     });
+
      let rule = CSSRulePlugin.getRule("span:after");
      tl.from(".anim1", {y:-50, stagger: .2, opacity: 0})
        .to(rule, {duration: 0.7,cssRule: {scaleY: 0}}, "-=2.2")
-       .from("aside", {backgroundPosition: '200px 0px', opacity: 0}, "-=1.5")
+       .from("aside", {backgroundPosition: '200px 0px', opacity: 0}, "-=1.5");
   }
-   else
-   {
-
-   }
 }

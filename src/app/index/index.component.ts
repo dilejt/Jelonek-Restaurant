@@ -3,7 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import {gsap} from 'gsap'
 import * as AOS from 'aos';
+
 declare var $: any;
+
+
+
 
 @Component({
   selector: 'app-index',

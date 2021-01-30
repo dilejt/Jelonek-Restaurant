@@ -6,11 +6,47 @@ header{
     font-family: 'Great Vibes';
     width: auto;
     height: 100vh;
+    font-size: 4vw;
+}
+header hr{
+    border: 1px solid black;
+}
+header .headerDescription{
+    font-size: 2vw;
+}
+@media (max-width: 1199.98px) {
+    header{
+        font-size: 5vw;
+    }
+    header .headerDescription{
+        font-size: 3vw;
+    }
+}
+@media (max-width: 991.98px) {
+    header{
+        font-size: 6vw;
+    }
+    header .headerDescription{
+        font-size: 4vw;
+    }
+}
+@media (max-width: 575.98px) {
+    header{
+        font-size: 8vw;
+    }
+    header .headerDescription{
+        font-size: 5vw;
+    }
 }
 header > div{
     padding-top: 250px;
 }
-
+.scrollMouse{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+    left: calc(50% - 17px);
+}
 
 .ornamentalHeading{
     padding-top: 15px;
@@ -43,21 +79,30 @@ header > div{
 
 #specialDish{
     height: auto;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    background-image: url("/assets/images/index/cucumber.png");
+    background-position: -385px 15%;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+}
+@media (max-width: 767.98px) { 
+    #specialDish{
+        background-position: -450px 15%;
+    }
 }
 #specialDish img{
     max-width: 100%;
     height: auto;
-    transition: all 0.7s ease;
 }
 .dishText{
     font-size: 1.2em;
     padding-top: 20px;
-    background-color: white;
     z-index: 1;
+
 }
 .dishName{
     font-family: 'Great Vibes';
+    padding-top: 20px;
 }
 
 @media (max-width: 767.98px) { 
@@ -75,15 +120,11 @@ header > div{
 }
 .dishDescription{
     font-family: 'Calibri';
+    font-style: italic;
 }
 @media (min-width: 768px) {
     .dishDescription{
         padding: 5px 50px 0px 50px;
-    }
-    #specialDish img:hover{
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
     }
 }
 

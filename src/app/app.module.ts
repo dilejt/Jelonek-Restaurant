@@ -13,6 +13,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NewsComponent } from './news/news.component';
 import { OpinieComponent } from './opinie/opinie.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
+    RatingModule,
     ReactiveFormsModule
   ],
   providers: [],

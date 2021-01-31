@@ -6,9 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { StarRatingComponent } from 'ng-starrating';
 declare var $: any;
-
 @Component({
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
@@ -21,14 +20,14 @@ export class KontaktComponent implements OnInit {
   name : any;
   email : any;
   subject : any;
-  message : any
-
+  message : any;
+  rating : any;
   onClickSubmit(data : any) {
     this.name = data.name;
     this.email = data.email;
     this.subject = data.subject;
     this.message = data.message;
-
+    data.rating = this.rating;
     const headers = new HttpHeaders()
     .set('Authorization', 'my-auth-token')
     .set('Content-Type', 'application/json');
@@ -38,9 +37,7 @@ export class KontaktComponent implements OnInit {
     })
     .subscribe(data => {
     });
-    
   }
-
   public sendEmail(e: Event) {
     e.preventDefault();
     emailjs.sendForm('service_j2x8r1d', 'template_irk4mw1', e.target as HTMLFormElement, 'user_AiaCcuoHWj0ESy1Z8X13w')
@@ -48,7 +45,8 @@ export class KontaktComponent implements OnInit {
       }, (error) => {
       });
   }
-
+  
+  
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -59,16 +57,18 @@ export class KontaktComponent implements OnInit {
       name: new FormControl(''),
       email: new FormControl(''),
       subject: new FormControl(''),
-      message: new FormControl('')
+      message: new FormControl(''),
     });
     TweenMax.set(".char", {opacity: 0});
     var tl=new TimelineMax({repeat:0,repeatDelay:0});
     tl.staggerTo(".char",1.5,{opacity:1,y:20,ease:Power2.easeInOut,repeat:0,yoyo:false,},0.13 ).delay(3);
   }
 
+  onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) 
+  {
+    this.rating=$event.newValue;
+  }
 }
-
-
 (function(){
   emailjs.init("user_AiaCcuoHWj0ESy1Z8X13w");
 })();

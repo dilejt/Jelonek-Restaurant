@@ -69,30 +69,13 @@
                     </div>
                     <div class="form-group">
                         <label for="InputRate" class="anim1">Ocena</label>
-                        <div class="stars rating-align anim1">
-                            <svg height="40" width="40" class="star" data-rating="1">
-                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
-                            </svg>
-                            <svg height="40" width="40" class="star" data-rating="2">
-                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
-                            </svg>
-                            <svg height="40" width="40" class="star" data-rating="3">
-                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
-                            </svg>
-                            <svg height="40" width="40" class="star" data-rating="4">
-                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
-                            </svg>
-                            <svg height="40" width="40" class="star" data-rating="5">
-                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
-                            </svg>
-                          </div>
+                            <star-rating [value]="5" [totalstars]="5" checkedcolor="#ffd055" uncheckedcolor="black" size="50px" [readonly]="false" (rate)="onRate($event)"></star-rating>
                     </div>
                     <div class="form-group">
                         <label for="FormControlTextarea" class="anim1">Komentarz</label>
                         <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control anim1" id="FormControlTextarea" rows="3" formControlName="message"></textarea>
                     </div>
                     <button type="submit" class="button anim1">Wyślij</button>
-                    Email entered is : {{email}} <!-- TODO DELETE -->
                 </form>
             </div>
         </div>

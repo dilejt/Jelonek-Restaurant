@@ -25,7 +25,7 @@ export class NewsComponent implements OnInit {
       },
     }
     )
-    gsap.from(".animation",{duration:1,opacity:0,x:-100,y:-400,scale:0.8,ease:"power  "});
+    gsap.from(".animation",{duration:1,opacity:0,x:-100,y:-400,scale:0.8,ease:"power  "}).delay(3);
     $(window).scrollTop(0);
   }
 

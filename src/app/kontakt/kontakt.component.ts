@@ -37,9 +37,7 @@ export class KontaktComponent implements OnInit {
     })
     .subscribe(data => {
     });
-    
   }
-
   public sendEmail(e: Event) {
     e.preventDefault();
     emailjs.sendForm('service_j2x8r1d', 'template_irk4mw1', e.target as HTMLFormElement, 'user_AiaCcuoHWj0ESy1Z8X13w')

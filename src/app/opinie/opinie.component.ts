@@ -15,7 +15,7 @@ export class OpinieComponent implements OnInit {
     loop: true,
     mouseDrag: false,
     touchDrag: false,
-    pullDrag: false,
+    pullDrag: true,
     dots: false,
     autoplay: true,
     paginationSpeed : 400,

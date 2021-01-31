@@ -55,7 +55,7 @@ export class IndexComponent implements OnInit {
       this.dishOfTheDay = dishes[random];   
     });
     
-    gsap.from(".animation",{duration:2,opacity:0,y:-50,scale:0.7,ease:"back"});
+    gsap.from(".animation",{delay:3,duration:2,opacity:0,y:-50,scale:0.7,ease:"back"});
     gsap.set(".scrollMouse",{transformOrigin: "50% 50%"});
     gsap.to(".scrollMouse",{duration: 2, rotation: 360});
     $(window).scrollTop(0);

@@ -5,7 +5,7 @@
 </div>
 <header>
   <owl-carousel-o [options]="opinionOptions" class="container-flex">
-     <ng-template carouselSlide *ngFor="let person of clients">
+     <ng-template carouselSlide *ngFor="let person of clients; let i=index">
         <div class="item">
            <img src="/assets/images/opinion/sliderBg.jpg" class="img-responsive">
            <div class="cover">
@@ -24,7 +24,6 @@
                           <svg height="40" width="40" class="star" data-rating="1" *ngFor="let x of [].constructor(person.ocena)">
                             <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
                           </svg>
-                          
                        </div>
                     </div>
                  </div>

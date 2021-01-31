@@ -27,7 +27,7 @@ export class KontaktComponent implements OnInit {
     .set('Authorization', 'my-auth-token')
     .set('Content-Type', 'application/json');
 
-    this.http.post('http://localhost:3300/kontakt', data, {
+    this.http.post('https://jelonek-app.herokuapp.com/kontakt', data, {
       headers: headers
     })
     .subscribe(data => {

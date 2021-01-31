@@ -48,7 +48,7 @@ export class IndexComponent implements OnInit {
       },
     })
     
-    this.http.get('http://localhost:3300').toPromise().then((app) => {
+    this.http.get('https://jelonek-app.herokuapp.com/').toPromise().then((app) => {
       this.categories = (app as any);
 
       let dishes = (app as any);

@@ -165,3 +165,7 @@ input
 .star polygon{
     fill-rule: nonzero;
 }
+#demo .char {
+    display: inline-block;
+    font-size: 80px;
+  }

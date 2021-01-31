@@ -16,7 +16,7 @@ export class OnasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    gsap.from(".animation",{duration:1,opacity:0,x:-400,scale:0.8,ease:"power0"});
+    gsap.from(".animation",{duration:1,opacity:0,x:-400,scale:0.8,ease:"power0"}).delay(3);
     $(document).scroll(function()
     {
       checkOffset();

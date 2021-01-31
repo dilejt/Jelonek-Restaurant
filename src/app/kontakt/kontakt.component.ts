@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
-import { gsap } from "gsap";
+import { gsap,TimelineMax,Power2,TweenMax } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
@@ -59,7 +59,9 @@ export class KontaktComponent implements OnInit {
       subject: new FormControl(''),
       message: new FormControl(''),
     });
-    //rating
+    TweenMax.set(".char", {opacity: 0});
+    var tl=new TimelineMax({repeat:0,repeatDelay:0});
+    tl.staggerTo(".char",1.5,{opacity:1,y:20,ease:Power2.easeInOut,repeat:0,yoyo:false,},0.13 ).delay(3);
   }
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) 

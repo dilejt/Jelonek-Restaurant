@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-
+declare var $:any;
 
 if (environment.production) {
   enableProdMode();
@@ -13,3 +13,10 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
+  $(document).ready(function() {
+	
+    setTimeout(function(){
+      $('body').addClass('loaded');
+    }, 3000);
+  
+  });

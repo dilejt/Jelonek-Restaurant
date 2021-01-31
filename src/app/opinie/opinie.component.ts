@@ -49,7 +49,7 @@ export class OpinieComponent implements OnInit {
     loader();
     $(window).scrollTop(0);
 
-    this.http.get('http://localhost:3300/opinie').toPromise().then((app) => {
+    this.http.get('https://jelonek-app.herokuapp.com/opinie').toPromise().then((app) => {
       this.clients = (app as any);
     });
   }

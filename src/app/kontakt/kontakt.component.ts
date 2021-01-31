@@ -108,4 +108,3 @@ function animacja()
        .to(rule, {duration: 0.7,cssRule: {scaleY: 0}}, "-=2.2");
   }
 }
-

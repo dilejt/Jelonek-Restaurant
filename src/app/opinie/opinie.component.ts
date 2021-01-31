@@ -52,4 +52,4 @@ export class OpinieComponent implements OnInit {
     });
   }
 
-}
+}  

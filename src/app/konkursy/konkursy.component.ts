@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from "gsap";
+import { loader } from '../loader';
 
 declare var $: any;
 
@@ -16,6 +17,7 @@ export class KonkursyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    loader();
     let mql = window.matchMedia('(max-width: 1670px)');
     if(mql.matches==false)
     {

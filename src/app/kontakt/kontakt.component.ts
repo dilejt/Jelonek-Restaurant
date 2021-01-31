@@ -7,6 +7,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StarRatingComponent } from 'ng-starrating';
+import { loader } from '../loader';
 declare var $: any;
 @Component({
   selector: 'app-kontakt',
@@ -44,6 +45,7 @@ export class KontaktComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    loader();
     $(window).scrollTop(0);
     f1();
     animacja();
@@ -55,7 +57,7 @@ export class KontaktComponent implements OnInit {
     });
     TweenMax.set(".char", {opacity: 0});
     var tl=new TimelineMax({repeat:0,repeatDelay:0});
-    tl.staggerTo(".char",1.5,{opacity:1,y:20,ease:Power2.easeInOut,repeat:0,yoyo:false,},0.13 ).delay(3);
+    tl.staggerTo(".char",.8,{opacity:1,y:20,ease:Power2.easeInOut,repeat:0,yoyo:false,},0.2 ).delay(3);
   }
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) 

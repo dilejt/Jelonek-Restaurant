@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { OwlCarousel } from 'ngx-owl-carousel';
-import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
+import { HttpClient } from '@angular/common/http';
 
 declare let $:any;
-let owl = $('owl-carousel-o');
 
 @Component({
   selector: 'app-opinie',
@@ -11,18 +9,19 @@ let owl = $('owl-carousel-o');
   styleUrls: ['./opinie.component.css']
 })
 export class OpinieComponent implements OnInit {
-  customOptions: any = {
+  clients : any;
+
+  opinionOptions: any = {
     loop: true,
-    mouseDrag:false,
+    mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    autoplay:true,
+    autoplay: true,
     paginationSpeed : 400,
-    singleItem:true,
+    singleItem: true,
     animateOut: 'animate__animated animate__slideOutDown',
     animateIn: 'animate__animated animate__flipInX',
-    //animateIn: 'animate__animated animate__slideInUp',
     navSpeed: 400,
     responsive: {
       0: {
@@ -41,29 +40,16 @@ export class OpinieComponent implements OnInit {
     nav: false
     
   }
-declare activeSlides:SlidesOutputData;
-declare slidesStore:any[];
-  constructor() { }
-  getData(data: SlidesOutputData)
-  {
-    this.activeSlides = data;
-    console.log(this.activeSlides);
-  }
-  
+
+  constructor(private http: HttpClient) { }
   
   ngOnInit(): void 
-  {}
+  {
+    $(window).scrollTop(0);
+
+    this.http.get('http://localhost:3300/opinie').toPromise().then((app) => {
+      this.clients = (app as any);
+    });
+  }
 
 }
-$('owl-carousel-o').on('mousewheel', 'ng-template', function (e: { deltaY: number; preventDefault: () => void; }) 
-{
-  if (e.deltaY>0) 
-  {
-    $('owl-carousel-o').trigger('next.owl.carousel');
-  } 
-  else 
-  {
-    $('owl-carousel-o').trigger('prev.owl.carousel');
-  }
-  e.preventDefault();
-});

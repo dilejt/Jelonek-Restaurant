@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {gsap} from 'gsap'
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as AOS from 'aos';
+
+declare var $: any;
+
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
@@ -25,6 +26,7 @@ export class NewsComponent implements OnInit {
     }
     )
     gsap.from(".animation",{duration:1,opacity:0,x:-100,y:-400,scale:0.8,ease:"power  "});
+    $(window).scrollTop(0);
   }
 
 }

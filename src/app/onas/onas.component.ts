@@ -20,7 +20,8 @@ export class OnasComponent implements OnInit {
     $(document).scroll(function()
     {
       checkOffset();
-    })
+    });
+    $(window).scrollTop(0);
   }
 
   ngOnDestroy(){

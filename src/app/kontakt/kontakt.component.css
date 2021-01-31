@@ -149,3 +149,19 @@ input
 {
 	color: #fff;
 }
+.stars{
+    cursor: pointer;
+    display: flex;
+}
+.stars:hover .star polygon {
+    fill: #ffd055;
+}
+.stars .star polygon {
+    fill: #2f52348a;
+}
+.stars .star:hover ~ .star polygon {
+    fill: #2f52348a;
+}
+.star polygon{
+    fill-rule: nonzero;
+}

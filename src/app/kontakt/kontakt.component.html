@@ -46,28 +46,45 @@
         <div class="row end" data-aos="fade-up">
             <div class="col-sm">
                 <p class="dol anim1"><span>Formularz kontaktowy</span></p>
-                <form>
+                <form method="post" [formGroup]="opinionForm" (ngSubmit) = "onClickSubmit(opinionForm.value)" (submit)="sendEmail($event)">
                     <div class="form-group">
-                        <label for="InputName " class="anim1"><span>Imie i nazwisko</span></label>
-                        <input class="form-control anim1" id="InputName" type="text" placeholder="Tutaj wpisz imie i nazwisko" name="name">
+                        <label for="InputName" class="anim1"><span>Imie i nazwisko</span></label>
+                        <input class="form-control anim1" id="InputName" name="name" type="text" placeholder="Tutaj wpisz imie i nazwisko" formControlName="name" required>
                     </div>
                     <div class="form-group">
                         <label for="InputEmail" class="anim1">Adres e-mail</label>
-                        <input type="email" name="email" class="form-control anim1" id="InputEmail" aria-describedby="emailHelp" placeholder="Tutaj wpisz adres e-mail">
+                        <input type="email" name="email" class="form-control anim1" id="InputEmail" aria-describedby="emailHelp" placeholder="Tutaj wpisz adres e-mail" formControlName="email" required>
                     </div>
                     <div class="form-group">
                         <label for="InputSubject" class="anim1">Temat</label>
-                        <input type="text" name="subject" class="form-control anim1" id="InputSubject" placeholder="Tutaj wpisz adres temat">
+                        <input type="text" name="subject" class="form-control anim1" id="InputSubject" placeholder="Tutaj wpisz adres temat" formControlName="subject" required>
                     </div>
                     <div class="form-group">
                         <label for="InputRate" class="anim1">Ocena</label>
-                        <input type="text" name="subject" class="form-control anim1" id="InputRate">
+                        <div class="stars rating-align anim1">
+                            <svg height="40" width="40" class="star" data-rating="1">
+                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                            </svg>
+                            <svg height="40" width="40" class="star" data-rating="2">
+                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                            </svg>
+                            <svg height="40" width="40" class="star" data-rating="3">
+                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                            </svg>
+                            <svg height="40" width="40" class="star" data-rating="4">
+                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                            </svg>
+                            <svg height="40" width="40" class="star" data-rating="5">
+                              <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                            </svg>
+                          </div>
                     </div>
                     <div class="form-group">
                         <label for="FormControlTextarea" class="anim1">Komentarz</label>
-                        <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control anim1" id="FormControlTextarea" rows="3"></textarea>
+                        <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control anim1" id="FormControlTextarea" rows="3" formControlName="message"></textarea>
                     </div>
                     <button type="submit" class="button anim1">Wyślij</button>
+                    Email entered is : {{email}} <!-- TODO DELETE -->
                 </form>
             </div>
         </div>
@@ -82,8 +99,3 @@
         </div>
     </div>
 </section>
-<script type="text/javascript">
-    (function(){
-       emailjs.init("user_AiaCcuoHWj0ESy1Z8X13w");
-    })();
- </script>

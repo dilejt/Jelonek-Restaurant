@@ -6,9 +6,6 @@ import * as AOS from 'aos';
 
 declare var $: any;
 
-
-
-
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -47,8 +44,8 @@ export class IndexComponent implements OnInit {
         let maxWidth = 1355;
         return window.innerWidth < maxWidth;
       },
-    }
-    )
+    })
+    
     this.http.get('http://localhost:3300').toPromise().then((app) => {
       this.categories = (app as any);
 
@@ -57,12 +54,27 @@ export class IndexComponent implements OnInit {
       let random = Math.floor(Math.random() * dishesQuantity);
       this.dishOfTheDay = dishes[random];   
     });
+    
     gsap.from(".animation",{duration:2,opacity:0,y:-50,scale:0.7,ease:"back"});
+    gsap.set(".scrollMouse",{transformOrigin: "50% 50%"});
+    gsap.to(".scrollMouse",{duration: 2, rotation: 360});
+    $(window).scrollTop(0);
+
   }
+
   filterByCategory(type : any){
     return this.categories.filter((x : any) => x.idkategoria == type);
   }
-  
+
+  ngOnDestroy(){
+    $('html').css("scroll-behavior", "auto");
+  }
   
 }
+
+$(document).ready(function() {
+  $('.scrollMouse').click(function () {
+    $('html').css("scroll-behavior", "smooth");
+  });
+});
 

@@ -1,83 +1,44 @@
 <header>
-  <owl-carousel-o [options]="customOptions" (changed)="getData($event)" class="container-flex">
-    <ng-template carouselSlide>
-      <div class="item">
-          <img src="/assets/images/opinion/slider1.jpg" class="img-responsive" alt="images not found">
-          <div class="cover">
+  <owl-carousel-o [options]="opinionOptions" class="container-flex">
+     <ng-template carouselSlide *ngFor="let person of clients">
+        <div class="item">
+           <img src="/assets/images/opinion/sliderBg.jpg" class="img-responsive">
+           <div class="cover">
               <div class="container">
-                  <div class="header-content">
-                      <div class="line"></div>
-                      <div class="row">
-                        <div class="col-md-3">
-                          <img src="/assets/images/opinion/woman1.jpg" class="img-responsive person-img" alt="images not found">
-                          <h2 class="username text-center">Username</h2>
-                        </div>
-                        <div class="col-md-9">
-                          <h1>Subject</h1>
-                          <h3>"Mało która restauracja potrafi zrobić tak dobre wrażenie na kliencie"</h3>
-                        </div>
-                        <div class="stars rating-align" data-stars="1">
-                          <svg height="40" width="40" class="star" data-rating="1">
-                            <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                          </svg>
-                          <svg height="40" width="40" class="star" data-rating="2">
-                            <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                          </svg>
-                          <svg height="40" width="40" class="star" data-rating="3">
-                            <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                          </svg>
-                          <svg height="40" width="40" class="star" data-rating="4">
-                            <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                          </svg>
-                          <svg height="40" width="40" class="star" data-rating="5">
-                            <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                          </svg>
-                        </div>
-                      </div>
-                </div>
-              </div>
-            </div>
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-      <div class="item">
-          <img src="/assets/images/opinion/slider1.jpg" class="img-responsive" alt="images not found">
-          <div class="cover">
-              <div class="container">
-                  <div class="header-content">
+                 <div class="header-content">
                     <div class="line"></div>
                     <div class="row">
-                      <div class="col-md-3">
-                        <img src="/assets/images/opinion/man1.jpg" class="img-responsive person-img" alt="images not found">
-                        <h2 class="username text-center">Username</h2>
-                      </div>
-                      <div class="col-md-9">
-                        <h1>Subject</h1>
-                        <h3>"Wspaniała atmosfera, pyszne jedzenie, cudowna muzyka..."</h3>
-                      </div>
-                      <div class="stars rating-align" data-stars="1">
-                        <svg height="40" width="40" class="star" data-rating="1">
-                          <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                        </svg>
-                        <svg height="40" width="40" class="star" data-rating="2">
-                          <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                        </svg>
-                        <svg height="40" width="40" class="star" data-rating="3">
-                          <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                        </svg>
-                        <svg height="40" width="40" class="star" data-rating="4">
-                          <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                        </svg>
-                        <svg height="40" width="40" class="star" data-rating="5">
-                          <polygon points="18.18,	2.02,	6.06,	43.56,	38.16,	17.16,	0,	17.16,	32.1,	43.56,	6.06" style="fill-rule:nonzero;"/>
-                        </svg>
-                      </div>
+                       <div class="col-md-3">
+                          <img src="/assets/images/opinion/woman1.jpg" class="img-responsive person-img" alt="osoba">
+                          <h2 class="m-2 text-center">{{ person.tozsamosc }}</h2>
+                       </div>
+                       <div class="col-md-9">
+                          <h1>{{ person.temat }}</h1>
+                          <h3 class="font-italic"><q>{{ person.opinia }}</q></h3>
+                       </div>
+                       <div class="stars rating-align" data-stars="1">
+                          <svg height="40" width="40" class="star" data-rating="1">
+                             <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                          </svg>
+                          <svg height="40" width="40" class="star" data-rating="2">
+                             <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                          </svg>
+                          <svg height="40" width="40" class="star" data-rating="3">
+                             <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                          </svg>
+                          <svg height="40" width="40" class="star" data-rating="4">
+                             <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                          </svg>
+                          <svg height="40" width="40" class="star" data-rating="5">
+                             <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
+                          </svg>
+                       </div>
                     </div>
-                  </div>
+                 </div>
               </div>
-            </div>
-      </div>
-    </ng-template>                    
+          </div>
+        </div>
+     </ng-template>
   </owl-carousel-o>
 </header>
 
@@ -90,19 +51,19 @@
         <h2 class="username">Magda Gessler</h2>
         <div class="stars" data-stars="1">
           <svg height="60" width="60" class="star" data-rating="1">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="2">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="3">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="4">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="5">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
         </div>
       </div>
@@ -123,19 +84,19 @@
         <h2 class="username">Tomasz Jakubiak</h2>
         <div class="stars" data-stars="1">
           <svg height="60" width="60" class="star" data-rating="1">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="2">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="3">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="4">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
           <svg height="60" width="60" class="star" data-rating="5">
-            <polygon points="27.27,	3.03,	9.09,	65.34,	57.24,	25.74,	0,	25.74,	48.15,	65.34,	9.09" style="fill-rule:nonzero;"/>
+            <polygon points="18,2, 6,43, 38,17, 0,17, 32,43, 20,6" />
           </svg>
         </div>
       </div>

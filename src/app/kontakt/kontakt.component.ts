@@ -4,7 +4,11 @@ import { gsap } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { FormGroup, FormControl } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 declare var $: any;
+
 @Component({
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
@@ -12,29 +16,58 @@ declare var $: any;
   animations: []
 })
 export class KontaktComponent implements OnInit {
+
+  opinionForm : any;
+  name : any;
+  email : any;
+  subject : any;
+  message : any
+
+  onClickSubmit(data : any) {
+    this.name = data.name;
+    this.email = data.email;
+    this.subject = data.subject;
+    this.message = data.message;
+
+    const headers = new HttpHeaders()
+    .set('Authorization', 'my-auth-token')
+    .set('Content-Type', 'application/json');
+
+    this.http.post('http://localhost:3300/kontakt', data, {
+      headers: headers
+    })
+    .subscribe(data => {
+    });
+    
+  }
+
   public sendEmail(e: Event) {
     e.preventDefault();
     emailjs.sendForm('service_j2x8r1d', 'template_irk4mw1', e.target as HTMLFormElement, 'user_AiaCcuoHWj0ESy1Z8X13w')
-      .then((result: EmailJSResponseStatus) => {
-        $("#walidacja").html("wysłano poprawnie");        
-        console.log(result.text);
+      .then((result: EmailJSResponseStatus) => {     
       }, (error) => {
-        console.log(error.text);
-        $("#walidacja").html("błąd przy wysyłaniu ");        
       });
   }
 
-  constructor( ) { }
-  
+  constructor(private http: HttpClient) { }
+
   ngOnInit(): void {
-    f1() 
+    $(window).scrollTop(0);
+    f1();
     animacja();
+    this.opinionForm = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      subject: new FormControl(''),
+      message: new FormControl('')
+    });
   }
- public wyczysc()
- {
-  $('form')[0].clear();
- }
+
 }
+
+(function(){
+  emailjs.init("user_AiaCcuoHWj0ESy1Z8X13w");
+})();
 
 function f1()
 {
@@ -47,9 +80,7 @@ function f1()
       let maxWidth = 1355;
       return window.innerWidth < maxWidth;
     },
-  }
-  )
-
+  })
 }
 
 function animacja()
@@ -59,32 +90,18 @@ function animacja()
   if(mql.matches==false)
   {
     gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
-    //  let tl = gsap.timeline({defaults:{duration: 1}});
+
      let tl = gsap.timeline({
-     scrollTrigger:{
-       trigger:".anim1",
-       pin:false,
-       start:"bottom bottom",
-     }
-     })
+      scrollTrigger:{
+        trigger:".anim1",
+        pin:false,  
+        start:"bottom bottom",
+      }
+     });
+
      let rule = CSSRulePlugin.getRule("span:after");
      tl.from(".anim1", {y:-50, stagger: .2, opacity: 0})
-       .to(rule, {duration: 0.7,cssRule: {scaleY: 0}}, "-=2.2")
-       .from("aside", {backgroundPosition: '200px 0px', opacity: 0}, "-=1.5")
+       .to(rule, {duration: 0.7,cssRule: {scaleY: 0}}, "-=2.2");
   }
-   else
-   {
-
-   }
 }
-var templateParams = {
-  name: 'James',
-  notes: 'Check this out!'
-};
 
-emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-  .then(function(response) {
-     console.log('SUCCESS!', response.status, response.text);
-  }, function(error) {
-     console.log('FAILED...', error);
-  });

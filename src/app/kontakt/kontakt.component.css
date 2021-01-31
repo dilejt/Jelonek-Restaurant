@@ -34,15 +34,7 @@ header
     padding-top: 70px;
     text-align: center;
     font-family: 'Great Vibes';
-    font-size: 3vw;
-}
-.dol1
-{
-    color:#2f5234;
-    padding-top: 70px;
-    text-align: center;
-    font-family: 'Great Vibes';
-    font-size: 3vw;
+    font-size: 4vw;
 }
 .tekst
 {
@@ -50,6 +42,14 @@ header
     font-family: 'Times New Roman';
     text-align: center;
     font-size: 1.5vw;
+}
+.fab{
+    font-size: 3em;
+}
+@media (max-width: 575.98px) {
+    .fab{
+        font-size: 2em;
+    }
 }
 .mapouter
 {
@@ -72,20 +72,20 @@ iframe{
 @media(max-width:1070px)
 {
     .front{
-        font-size:8vw;
-        padding-right:35px;
+        font-size: 8vw;
+        padding-right: 35px;
     }
     .front1{
-        padding-right:35px;
+        padding-right: 35px;
     }
     .dol{
-        font-size:5vw;
+        font-size: 5vw;
     }
     .dol1{
-        font-size:5vw;
+        font-size: 5vw;
     }
     .tekst{
-        font-size:3vw;
+        font-size: 2vw;
     }
 }
 @media(max-width:561px)
@@ -148,4 +148,20 @@ input
 .button:hover a 
 {
 	color: #fff;
+}
+.stars{
+    cursor: pointer;
+    display: flex;
+}
+.stars:hover .star polygon {
+    fill: #ffd055;
+}
+.stars .star polygon {
+    fill: #2f52348a;
+}
+.stars .star:hover ~ .star polygon {
+    fill: #2f52348a;
+}
+.star polygon{
+    fill-rule: nonzero;
 }

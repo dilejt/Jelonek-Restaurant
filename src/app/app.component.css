@@ -6,6 +6,7 @@ nav{
     font-size: 1.5em;
     font-family: 'Parisienne';
     font-weight: 700;
+    max-width: 100vw;
 }
 nav a {
     color: #2a373b !important;

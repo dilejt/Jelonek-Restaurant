@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { loader } from '../loader';
 
 declare let $:any;
 
@@ -45,6 +46,7 @@ export class OpinieComponent implements OnInit {
   
   ngOnInit(): void 
   {
+    loader();
     $(window).scrollTop(0);
 
     this.http.get('http://localhost:3300/opinie').toPromise().then((app) => {

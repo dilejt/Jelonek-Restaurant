@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { gsap } from 'gsap'
+import { loader } from '../loader';
+import * as AOS from 'aos';
 
 declare var $: any;
 var tomatoAnim = true;
@@ -18,6 +20,17 @@ export class MenuComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    loader();
+    AOS.init({
+      once: true,
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      disable: function () {
+        let maxWidth = 1355;
+        return window.innerWidth < maxWidth;
+      },
+    })
     this.http.get('http://localhost:3300').toPromise().then((app) => {
       this.categories = (app as any);
 
@@ -36,6 +49,7 @@ export class MenuComponent implements OnInit {
   }
   
 }
+window.addEventListener('load', AOS.refresh);
 
 $(document).ready(function() {
 

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import {gsap} from 'gsap'
 import * as AOS from 'aos';
+import { loader } from '../loader';
 
 declare var $: any;
 
@@ -35,6 +36,7 @@ export class IndexComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    loader();
     AOS.init({
       once: true,
       offset: 200,
@@ -56,8 +58,8 @@ export class IndexComponent implements OnInit {
     });
     
     gsap.from(".animation",{delay:3,duration:2,opacity:0,y:-50,scale:0.7,ease:"back"});
-    gsap.set(".scrollMouse",{transformOrigin: "50% 50%"});
-    gsap.to(".scrollMouse",{duration: 2, rotation: 360});
+    gsap.set(".scrollMouse",{delay:3,transformOrigin: "50% 50%"});
+    gsap.to(".scrollMouse",{delay:3,duration: 2, rotation: 360});
     $(window).scrollTop(0);
 
   }

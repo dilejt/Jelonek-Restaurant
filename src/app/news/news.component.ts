@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {gsap} from 'gsap'
 import * as AOS from 'aos';
+import { loader } from '../loader';
 
 declare var $: any;
 
@@ -14,6 +15,7 @@ export class NewsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    loader();
     AOS.init({
       once: true,
       offset: 200,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
-
+import { loader } from '../loader';
 declare var $: any;
 
 @Component({
@@ -16,6 +16,7 @@ export class OnasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    loader();
     gsap.from(".animation",{duration:1,opacity:0,x:-400,scale:0.8,ease:"power0"}).delay(3);
     $(document).scroll(function()
     {
@@ -26,6 +27,7 @@ export class OnasComponent implements OnInit {
 
   ngOnDestroy(){
     $('.footer').css('background-image','url("/assets/images/footer.png")');
+    $('body').removeClass('loaded');
   }
 
 }

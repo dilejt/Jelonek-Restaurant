@@ -17,17 +17,11 @@ declare var $: any;
 export class KontaktComponent implements OnInit {
 
   opinionForm : any;
-  name : any;
-  email : any;
-  subject : any;
-  message : any;
   rating : any;
+
   onClickSubmit(data : any) {
-    this.name = data.name;
-    this.email = data.email;
-    this.subject = data.subject;
-    this.message = data.message;
     data.rating = this.rating;
+    
     const headers = new HttpHeaders()
     .set('Authorization', 'my-auth-token')
     .set('Content-Type', 'application/json');

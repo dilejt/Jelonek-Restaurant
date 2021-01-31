@@ -39,6 +39,7 @@ export class KontaktComponent implements OnInit {
       .then((result: EmailJSResponseStatus) => {     
       }, (error) => {
       });
+    window.location.reload(); 
   }
   
   

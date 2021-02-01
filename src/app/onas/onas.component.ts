@@ -32,8 +32,10 @@ export class OnasComponent implements OnInit {
 
 }
 function checkOffset() {
-  if($('#header').offset().top + $('#header').height() >= $('#tabela').offset().top - 10)
-      $('#przycisk').css('position', 'absolute');
-  if($(document).scrollTop() + window.innerHeight < $('#stop').offset().top+80)
-      $('#przycisk').css('position', 'fixed'); // restore when you scroll up
+  if ($('#header').length && $('#tabela').length && $('#stop').length) {
+    if($('#header').offset().top + $('#header').height() >= $('#tabela').offset().top - 10)
+        $('#przycisk').css('position', 'absolute');
+    if($(document).scrollTop() + window.innerHeight < $('#stop').offset().top+80)
+        $('#przycisk').css('position', 'fixed');
+  }
 }

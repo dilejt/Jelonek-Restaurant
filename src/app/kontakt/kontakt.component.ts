@@ -35,7 +35,7 @@ export class KontaktComponent implements OnInit {
     .subscribe(data => {
     });
 
-    this.opinionForm.reset();
+ 
   }
   public sendEmail(e: Event) {
     e.preventDefault();
@@ -43,6 +43,7 @@ export class KontaktComponent implements OnInit {
       .then((result: EmailJSResponseStatus) => {     
       }, (error) => {
       });
+      this.opinionForm.reset();
   }
 
   constructor(private http: HttpClient, private fb: FormBuilder) { this.createForm(); }

@@ -133,21 +133,18 @@ input
     user-select: none;
     background-color: inherit;
     float: right;
+    color: black;
 }
-.button a 
-{
-	color: #969696;
-	font-family: "Varela Round";
-	text-decoration: none;
-}
-.button:hover 
+.button:hover:enabled
 {
 	border-color: #fff;
-	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+    box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+    color: #fff;
 }
-.button:hover a 
+button[disabled]
 {
-	color: #fff;
+    cursor: not-allowed;
+    color: #676c6d;
 }
 .stars{
     cursor: pointer;

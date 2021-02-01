@@ -53,14 +53,14 @@
         <div class="row end" data-aos="fade-up">
             <div class="col-sm">
                 <p class="dol anim1"><span>Formularz kontaktowy</span></p>
-                <form method="post" [formGroup]="opinionForm" (ngSubmit) = "onClickSubmit(opinionForm.value)" (submit)="sendEmail($event)">
+                <form validate method="post" [formGroup]="opinionForm" (ngSubmit) = "onClickSubmit(opinionForm.value)" (submit)="sendEmail($event)">
                     <div class="form-group">
                         <label for="InputName" class="anim1"><span>Imie i nazwisko</span></label>
                         <input class="form-control anim1" id="InputName" name="name" type="text" placeholder="Tutaj wpisz imie i nazwisko" formControlName="name" required>
                     </div>
                     <div class="form-group">
                         <label for="InputEmail" class="anim1">Adres e-mail</label>
-                        <input type="email" name="email" class="form-control anim1" id="InputEmail" aria-describedby="emailHelp" placeholder="Tutaj wpisz adres e-mail" formControlName="email" required>
+                        <input type="email" [email]="true" name="email" class="form-control anim1" id="InputEmail" aria-describedby="emailHelp" placeholder="Tutaj wpisz adres e-mail" formControlName="email" required>
                     </div>
                     <div class="form-group">
                         <label for="InputSubject" class="anim1">Temat</label>
@@ -72,9 +72,9 @@
                     </div>
                     <div class="form-group">
                         <label for="FormControlTextarea" class="anim1">Komentarz</label>
-                        <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control anim1" id="FormControlTextarea" rows="3" formControlName="message"></textarea>
+                        <textarea name="message" placeholder="Tutaj wpisz swój komentarz" class="form-control anim1" id="FormControlTextarea" rows="3" formControlName="message" required></textarea>
                     </div>
-                    <button type="submit" class="button anim1">Wyślij</button>
+                    <button type="submit" [disabled]="opinionForm.pristine || opinionForm.invalid" class="button anim1">Wyślij</button>
                 </form>
             </div>
         </div>

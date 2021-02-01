@@ -4,11 +4,13 @@ import { gsap,TimelineMax,Power2,TweenMax } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StarRatingComponent } from 'ng-starrating';
 import { loader } from '../loader';
+
 declare var $: any;
+
 @Component({
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
@@ -32,6 +34,8 @@ export class KontaktComponent implements OnInit {
     })
     .subscribe(data => {
     });
+
+    this.opinionForm.reset();
   }
   public sendEmail(e: Event) {
     e.preventDefault();
@@ -39,11 +43,18 @@ export class KontaktComponent implements OnInit {
       .then((result: EmailJSResponseStatus) => {     
       }, (error) => {
       });
-    window.location.reload(); 
   }
-  
-  
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient, private fb: FormBuilder) { this.createForm(); }
+
+  createForm() {
+    this.opinionForm = this.fb.group({
+       name: ['', Validators.required ],
+       subject: ['', Validators.required ],
+       message: ['', Validators.required ],
+       email: ['', Validators.required ]
+    });
+  }
 
   ngOnInit(): void {
     loader();

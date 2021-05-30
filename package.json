@@ -22,14 +22,11 @@
     "@types/gsap": "^1.20.2",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
-    "cors": "^2.8.5",
     "emailjs-com": "^2.6.4",
-    "express": "^4.17.1",
     "gsap": "^3.6.0",
     "jquery": "^3.5.1",
     "jquery-mousewheel": "^3.1.13",
     "lodash": "^4.17.20",
-    "mysql": "^2.18.1",
     "ng-starrating": "^1.0.20",
     "ngx-owl-carousel": "^2.0.7",
     "ngx-owl-carousel-o": "^5.0.0",
@@ -59,17 +56,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  },
-  "description": "https://team-1606220046844.atlassian.net/jira/software/projects/RJ/boards/4/backlog \\\r https://github.com/dilejt/jelonek-app - Express API \\\r https://restauracjajelonek.herokuapp.com/ - Hosting \\\r Damian Jancewicz, Kacper Pańkiewicz, Łukasz Sinica, Szymon Doerfer",
-  "main": "karma.conf.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dilejt/Restauracja-Jelonek.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dilejt/Restauracja-Jelonek/issues"
-  },
-  "homepage": "https://github.com/dilejt/Restauracja-Jelonek#readme"
+  }
 }
